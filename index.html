@@ -271,10 +271,12 @@
 
  	<script src="js/vendor/jquery.min.js"></script> 
 
- 	  <script src="js/vendor/lightSlider.min.js"></script>
+ 	  <script src="js/vendor/lightslider.min.js"></script>
 
  	  <script>
- 	  	 $('#lightSlider').lightSlider({
+
+ 	  	$(document).ready(function(){
+ 	  		 $('#lightSlider').lightSlider({
 		    item:1,
 		    loop: true,
 		    controls: false,
@@ -284,6 +286,9 @@
 		    pauseOnHover: true,
 		    mode: 'slide',
 		  });
+ 	  	});
+
+ 	  	
  	  </script>
  
 	<script src="js/vendor/rellax.min.js"></script>   
