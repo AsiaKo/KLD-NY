@@ -30,7 +30,6 @@ header:after, header:before {
   position:absolute; /*changed from absolute to push to the middle with wide viewport*/
   height:4vw;
   height: calc(30px + 1vw);
-  margin-left: 4px;
   transition: all 0.5s;
 }
 
@@ -68,6 +67,10 @@ header:after, header:before {
   .nav {
     width: 95%;  /*fallback */
     width: var(--lg-width);
+  }
+
+  .logo {
+    margin-left: 4px;
   }
 }
 
