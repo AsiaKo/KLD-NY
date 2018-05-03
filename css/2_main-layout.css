@@ -1,0 +1,267 @@
+
+/* ==========================================================================
+    MAIN-LAYOUT.CSS
+   ========================================================================== */
+
+
+.content {
+    position: relative;
+    width: 100%;
+    height: auto;
+    background: white;
+    overflow: hidden;
+    z-index: 1;
+    margin-bottom: 60px;
+  /*  margin-top: 60px;*/
+}
+
+
+.wrapper-page {
+  width: var(--sm-width, 98%);
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+
+@media screen and (min-width: 1024px) {
+ .wrapper-page {
+    width: var(--lg-width, 96%);
+  }
+}
+
+
+/*--------LANDING PAGE------------- */
+
+.home { 
+  background-image: url("../img/1049/sm-11.jpg");
+  background-color: rgba(0, 0, 0, 0.25);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: 50px;
+  height: calc(100vh - 50px);
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+/*MOBILE LARGE AND TABLET*/
+
+@media screen and (min-width: 400px) and (max-width: 1023px){
+  .home {
+    background-image: url("../img/1049/tablet-p-11.jpg");
+  }
+}
+
+
+@media screen and (min-width: 1024px) {
+  .home {
+    background-image: url("../img/1049/lg-11.jpg");
+/*    margin-top: 60px;*/
+    height: calc(100vh - 70px);
+  }
+}
+
+.home  .col-1 {
+  align-self: center;
+}
+
+.home  .col-1 h1 {
+  color: white;
+  font-size: calc(30px + 5vmin);
+  font-weight: 900;
+  text-align: center;
+}
+
+
+/*-------- END LANDING PAGE------------- */
+
+
+/*--------------SECTION------------------ */
+
+
+/*----------MOBILE PORTRAIT------------- */
+section {
+  width: 100%;
+  height: auto;
+  margin-top: 60px;
+  min-height: calc(100vh - 60px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+
+.col {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.col-2 {
+  overflow: hidden;
+   height:calc(50vh - 30px);
+}
+
+.col-2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.contact, .error {
+  margin-top: 50px;
+  padding-top: 0;
+  height: calc(100vh - 120px);
+  min-height: calc( 100vh - 110px);
+  margin-bottom: 0;
+}
+
+
+/*----------MOBILE  LANDSCAPE------------ */
+
+@media screen and (orientation: landscape) {
+  section {
+    flex-direction: row;
+    justify-content: space-between;
+
+  }
+
+  .services .col-1 {
+  padding-left: 5vmin;
+    justify-content: center;
+  }
+
+  .col {
+    width: 48%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .col-2 {
+    height:calc(100vh - 70px);
+  }
+   .col-2 img {
+    height: 100%;
+  }
+
+.testimonials.col-1  {
+  justify-content: flex-start;
+  }
+  .testimonials.col-2  {
+    height: auto;
+  }
+
+  .services {
+    flex-direction: row-reverse;
+  }
+ 
+}
+
+
+@media screen and (min-width: 1024px) and (orientation: landscape) {
+ 
+  section {
+    height:calc(100vh - 70px);
+  }
+  
+
+  .col {
+    position: relative;
+    width: 50%;
+    max-width: 700px;
+    height: 100%;
+    max-height: 700px;
+    /*overflow: hidden;*/
+    margin: auto;
+  }
+
+   .col-2 {
+    width: 80vmin;
+    height: 80vmin;     
+  }
+
+}
+
+
+/*-------------- CONTACT SECTION------------------ */
+
+.contact li {
+    display: flex;
+
+}
+
+ul.contact-items {
+  margin-top: calc(3px + 4vmin);
+}
+
+.contact .contact-items p  {
+  margin: auto 0;
+}
+
+.contact-items li {
+  margin-top: calc(2px + 1vmin);
+}
+
+.contact .contact-items span {
+  display: flex;
+  padding-left:0;
+  width: 35px;
+  margin-right:calc(5px + .5vmin);
+  justify-content: center;
+  margin: auto 0;
+}
+
+.contact .contact-items .location{
+  margin-top:  0;
+}
+
+/*TINY PHONES */
+
+@media  screen and (max-width: 321px){
+  .contact-items span.icon {
+    display: none;
+  }
+  section {
+    margin-bottom: 0;
+  }
+  .contact .col-1 .no-display{
+    display: none;
+  }
+  .contact h1, p{
+    padding-bottom:0;
+    margin-bottom: 0;
+  }
+  ul.contact-items {
+    margin-top: 0;
+  }
+  .contact-items li {
+    margin-bottom: 0px;
+  }
+
+}
+
+@media  screen and (max-height: 568px) and (orientation: landscape) {
+  .contact-items span.icon {
+    display: none;
+  }
+
+  .no-display {
+    display: none;
+  }
+}
+
+
+#map {
+  height: 100%;
+  width: 100%;
+}
+
+
+
+/* ==========================================================================
+    END MAIN-LAYOUT.CSS
+   ========================================================================== */
+

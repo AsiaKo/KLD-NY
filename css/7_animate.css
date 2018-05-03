@@ -1,0 +1,284 @@
+
+/* ==========================================================================
+    ANIMATE.CSS
+   ========================================================================== */
+
+/* ------------FADE IN ANIMATION ON SCROLL  ---------------*/
+
+
+.animate {
+  opacity: 0;
+  position: relative;
+  will-change: opacity;  
+}
+
+
+.fade-up {
+    animation-name: fade-up;
+    animation-duration: .9s;
+    animation-timing-function: cubic-bezier(.19,1,.22,1);
+    animation-fill-mode: both;
+    animation-delay: .6s;
+}
+
+
+@keyframes fade-up{
+    0% {
+        opacity: 0;
+        transform: translate3d(0,30px,10px);
+
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/*ANIMATION DELAYS */
+
+
+[data-anim-delay=""] {
+  animation-delay: 0ms;
+}
+
+[data-anim-delay="100"] {
+  animation-delay: 100ms;
+}
+[data-anim-delay="200"] {
+  animation-delay: 200ms;
+}
+[data-anim-delay="300"] {
+  animation-delay: 300ms;
+}
+[data-anim-delay="400"] {
+  animation-delay: 400ms;
+}
+[data-anim-delay="500"] {
+  animation-delay: 500ms;
+}
+
+
+[data-anim-delay="600"] {
+  animation-delay: 500ms;
+}
+
+
+[data-anim-delay="1000"] {
+  animation-delay: 1000ms;
+}
+
+[data-anim-delay="1500"] {
+  animation-delay: 1500ms;
+}
+
+[data-anim-delay="2000"] {
+  animation-delay: 2000ms;
+}
+
+[data-anim-delay="2500"] {
+  animation-delay: 2500ms;
+}
+
+
+/* ------------END FADE IN ANIMATION ON SCROLL  ---------------*/
+
+
+
+/* -------------SCROLL DOWN / BACK TO TOP ANIMATION ---------------*/
+.line{
+  position: fixed;
+  top: calc(100% - 45px);
+  right:5%;
+  height: 30px;
+  width:60px;
+  text-align: center;
+  z-index:9;
+  transform: all 6.7s 2s;
+  will-change: transform;
+}
+
+.line:before{
+  position: absolute;
+  left:50%;
+  top:50%;
+  transform: translate(-50%, -50%);
+  color: var(--light-font-color);
+  line-height: 15px;
+  letter-spacing: 1.9px;
+  font-family: 'Helvetica', 'Century Gothic', sans-serif;
+  font-size: var(--xs-font-size, 8px);
+  text-transform: uppercase;
+}
+
+
+.line.line-scroll {
+  width: 0;
+  position: absolute;
+  right: 5%;
+  top: calc(100vh - 120px);
+  opacity: 1;
+  background-color: var(--accent-color, red);
+  transform: all 6.7s 2s;
+  }
+
+/*
+@media (min-width: 1025px) {
+  .line.line-scroll {
+    top: calc(100vh - 100px);
+  }
+  
+}*/
+
+
+.line-scroll:before {
+  content: "scroll";
+}
+
+.line-scroll::after {
+  content: "";
+  position: absolute;
+  top: -60px;
+  right:50%;
+  width: 1px;
+  background-color: var(--accent-color, red);
+  animation: scroll 2s  5s ease-out infinite;
+}
+
+
+@keyframes scroll {
+  0% {    
+    height: 0;
+    transform: translateY(0);
+  }
+  80% {   
+    height: 60px;
+    transform: translateY(0);
+  } 
+  100% {
+    height: 0;
+    transform: translateY(60px);
+  }
+}
+
+
+@media screen and (max-width: 1024px) {
+
+  .line-scroll {
+    right: 2%;
+  }
+  .line-scroll::after {
+    top: -20px;
+    right: 10px;
+  }
+
+  .line-scroll:before {
+    left:60%;
+    writing-mode: vertical-lr;
+  }
+}
+
+
+/* -------- BACK TO TOP --------- */
+
+.line-top { 
+  opacity: 0;
+  transform: translateY(30px);
+  cursor: pointer;
+  z-index:9;
+  background-color: rgba(255, 255, 255, .5);
+  transition: all .3s .3s;
+}
+
+
+.line-top:before {
+  content: "to top";
+}
+
+.line-top::after {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: 25%;
+  width: 30px;
+  height: 1px;
+  background-color: var(--accent-color, red);
+  transition: width .4s .3s ease-in-out; 
+  
+}
+.line-top:hover:after {
+  animation: toTop 1s  .4s ease-in-out alternate;
+
+ }
+
+@keyframes toTop {
+  0% {    
+    width: 30px;
+    transform: translateX(0);
+  }
+15% {   
+  width: 10px;
+  transform: translateX(0);
+  } 
+
+  25% {   
+  width: 60px;
+  transform: translateX(0);
+  } 
+  50% {
+    width: 30px;
+    transform: translateX(30px);
+    }
+  75% {   
+  width: 60px;
+  transform: translateX(0px);
+  }
+  90% {
+    width: 10px;
+    transform: translateX(0px);
+  }
+  100% {
+    width: 30px;
+    transform: translateX(0px);
+  }
+}
+
+
+/* ------------- END SCROLL ANIMATION ---------------*/
+
+
+/* ------------- PAGE TRANSITION SCREEN ---------------*/
+
+.screen{
+  content:'';
+  z-index:105 ;
+  position: absolute;
+  top:0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+  animation: pageTransition 1s .6s cubic-bezier(0.16, 1.08, 0.38, 0.98) forwards;
+  overflow-x: hidden;
+  
+}
+
+@keyframes pageTransition {
+  0% {
+    transform: translateX(0%);
+  }
+  
+ 100% {
+  transform: translateX(100%);
+  transform-origin: left;   
+ }
+
+}
+
+
+
+/* ==========================================================================
+    END ANIMATE.CSS
+   ========================================================================== */
+
+

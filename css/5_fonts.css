@@ -1,0 +1,103 @@
+
+ /* ==========================================================================
+     FONTS.CSS
+   ========================================================================== */
+
+
+/*@import url('https://fonts.googleapis.com/css?family=Montserrat:300,700');*/
+/*@import url('https://fonts.googleapis.com/css?family=Lato:300,700');*/
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,400,600');
+
+
+
+body{
+color: var(--light-font-color);
+font-family: var(--body-font-family);
+
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+
+}
+
+
+/*font-color variable*/ 
+
+h1 {
+  color: var(--dark-font-color);
+  font-weight:900;
+  letter-spacing: 1.2px;
+  font-size: var(--header-font-size);
+/*  margin-bottom: var(--margin-bottom);*/
+  font-family: "avenir", sans-serif;
+}
+
+
+h2 {
+    margin-bottom: var(--margin-bottom);
+}
+
+p, address{   
+  font-size:  var(--body-font-size);           
+  letter-spacing: 1.7px;
+  line-height: calc(var(--body-font-size) * 1.4);
+  padding: .2em;
+}
+
+.contact .contact-items p {
+   margin: auto 0;
+  }
+
+.nav ul a.a-link, .btn{
+  font-weight: 400;
+  font-size: var(--body-font-size);
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  color: var(--light-font-color);
+}
+
+.nav ul a:hover, 
+a.a-link:hover {
+color: var(--accent-color);
+}
+
+.active > a{
+  color: var(--accent-color);
+}
+
+
+
+.credits a{
+  letter-spacing: .1em;
+  cursor: pointer;
+}
+
+.credits a:hover{
+  color: var(--accent-color); 
+}
+
+
+.copy, .credits{
+  font-size: 12px;
+  font-size: var(--sm-font-size);
+}
+
+address {
+  font-style: normal;
+  font-size: var(--body-font-size);
+  color: var(--light-font-color);
+}
+
+
+.contact .a-link   {
+  color: var(--dark-font-color);
+  font-weight: 500;
+  text-transform: none;
+}
+
+span.red-element {
+  color: var(--accent-color);
+}
+
+ /* ==========================================================================
+    END FONTS.CSS
+   ========================================================================== */

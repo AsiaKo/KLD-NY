@@ -1,0 +1,71 @@
+ /* ==========================================================================
+     FOOTER.CSS
+   ========================================================================== */
+
+
+footer {
+  background: white;
+  display: flex;   
+  align-items: center;
+  position: fixed;
+  bottom:0;
+  left:0;
+  right:0;
+  margin: 0 auto;
+  width: var(--sm-width, 98%);
+  max-width: 1920px;
+  height: 70px;
+÷
+  transition: 0.5s;
+  /* z-index: -1;*/
+  text-align:center;  
+    border-top: 2px solid #eee;
+}
+
+
+.copy {
+  position: absolute;
+  top: 20px;
+}
+
+.footer ul {
+  margin: 0 auto;
+  list-style: none;
+  display: flex;
+}
+
+.credits {
+  position: absolute;
+  bottom: 7px;
+  font-style: italic;    
+  font-size: var(--sm-font-size);
+  cursor: pointer;
+}
+
+.icon {
+  fill:var(--dark-font-color);
+
+  box-sizing: border-box;
+  transition: all .3s ease-in-out;
+}
+
+.social-items li {
+    padding:10px;
+}
+
+.icon:hover {
+  fill:var(--accent-color);
+}
+
+@media screen and (min-width:1024px) {
+  footer {
+
+    width: var(--lg-width, 95%);
+  }
+
+    
+}
+
+ /* ==========================================================================
+     END FOOTER.CSS
+   ========================================================================== */

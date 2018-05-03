@@ -1,0 +1,117 @@
+/* ==========================================================================
+    BASE.CSS
+   ========================================================================== */
+
+*, *:before , *:after{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+  touch-action: manipulation;
+ /* border: 1px solid red;*/
+}
+
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden; /*REMOVES HORIZONTAL SCROLLBAR THE ABOVE CREATES*/
+  margin-top: 0px; /*COMPENSATES THE HORIZONTAL SCROLLBAR*/
+  background: #fff;
+  margin-left: calc(100vw - 100%); /*fix for jumping content does not work :(*/
+
+}
+
+body {
+  background-color: var(--body-background-color);
+
+}
+
+
+/*--------VARIABLES---------------*/
+
+:root {
+
+  /*BACKGROUND COLOR*/
+--body-background-color: rgba(255, 255, 255, 1);
+
+/*----------------FONTS-----------*/
+
+/*FONT-FAMILY*/
+
+--body-font-family:  "Century Gothic", 'Avenir', "poppins", sans-serif;
+
+/*FONT-COLORS*/
+
+--light-font-color: rgba(51, 51, 51, .5);
+/*--light-font-color: #484848;*/
+
+--dark-font-color: rgba(0, 0, 0, .8);
+--accent-color:red;
+
+/*FONT SIZES*/
+--header-font-size: calc(35px + 2vmin);
+--body-font-size: calc(14px + .2vmin);
+--sm-font-size:calc(10px + .1vmax);
+--xs-font-size:8px;
+
+/* ---------WIDTH  NAV, FOOTER, MAIN ON SMALL AND LARGE DEVICES------------*/
+--lg-width: 96%;
+--sm-width: 98%;
+
+/* ---------PADDING ------------*/
+
+--padding-top: calc(5px + 1vmin);
+
+
+/* ---------MARGIN ------------*/
+
+--margin-bottom: calc(5px + 1vmin);
+
+}
+
+/*--------END VARIABLES---------------*/
+
+
+
+
+/*------CUSTOMIZED SCROLL BAR ------- */
+
+html{
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+    width: 2px;
+    height: 40px;
+}
+ 
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: red;
+  outline: 1px solid slategrey;
+}
+
+
+/*------ END CUSTOMIZED SCROLL BAR ------- */
+
+
+a {
+text-decoration: none;
+color: var(--dark-font-color);
+}
+
+ul {
+  list-style: none;
+}
+
+ 
+
+/* ==========================================================================
+    END BASE.CSS
+   ========================================================================== */
+
+
+    
