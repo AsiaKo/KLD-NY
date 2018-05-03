@@ -46,7 +46,7 @@ $(document).ready(function(){
          var target = this.hash;
 
         $('body,html').animate({
-          scrollTop: $(target).offset().top-60
+          scrollTop: $(target).offset().top
         }, 1000,  function(){
           window.location.hash = target;
       });
