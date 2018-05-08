@@ -37,7 +37,8 @@ body {
 
 /*FONT-FAMILY*/
 
---body-font-family:  "Century Gothic", 'Avenir', "poppins", sans-serif;
+--body-font-family:  'Century Gothic', 'Avenir', 'Montserrat', sans-serif;
+
 
 /*FONT-COLORS*/
 
@@ -98,6 +99,15 @@ body::-webkit-scrollbar-thumb {
 /*------ END CUSTOMIZED SCROLL BAR ------- */
 
 
+h1 {
+    margin-bottom: var(--margin-bottom);
+}
+
+
+p {
+margin-bottom: calc(var(--margin-bottom)/ 1.2);
+}
+
 a {
 text-decoration: none;
 color: var(--dark-font-color);
@@ -107,6 +117,11 @@ ul {
   list-style: none;
 }
 
+
+.contact .contact-items p, address {
+   margin: auto 0;
+   padding-left: calc(5px + 1vmin);
+}
  
 
 /* ==========================================================================

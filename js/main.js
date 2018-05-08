@@ -44,11 +44,12 @@ $(document).ready(function(){
         e.preventDefault();
 
          var target = this.hash;
+         var targetOffset = $(target).offset().top - 50;
 
         $('body,html').animate({
-          scrollTop: $(target).offset().top
+          scrollTop: targetOffset
         }, 1000,  function(){
-          window.location.hash = target;
+          window.location.hash = targetOffset;
       });
     }  // End if
   });

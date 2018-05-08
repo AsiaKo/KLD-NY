@@ -17,7 +17,7 @@
 
 
 .wrapper-page {
-  width: var(--sm-width, 98%);
+  width: var(--sm-width);
   max-width: 1920px;
   margin: 0 auto;
 }
@@ -25,7 +25,7 @@
 
 @media screen and (min-width: 1024px) {
  .wrapper-page {
-    width: var(--lg-width, 96%);
+    width: var(--lg-width);
   }
 }
 
@@ -66,12 +66,6 @@
   align-self: center;
 }
 
-.home  .col-1 h1 {
-  color: white;
-  font-size: calc(30px + 5vmin);
-  font-weight: 900;
-  text-align: center;
-}
 
 
 /*-------- END LANDING PAGE------------- */
@@ -99,6 +93,10 @@ section {
   flex-direction: column;
 }
 
+.col-1 {
+   padding-left: 1vmax;
+}
+
 .col-2 {
   overflow: hidden;
    height:calc(50vh - 30px);
@@ -118,6 +116,9 @@ section {
   min-height: calc( 100vh - 110px);
   margin-bottom: 0;
 }
+
+
+
 
 
 /*----------MOBILE  LANDSCAPE------------ */
@@ -157,6 +158,9 @@ section {
   .services {
     flex-direction: row-reverse;
   }
+  .services col-1 {
+    padding-left: 0;
+  }
  
 }
 
@@ -176,6 +180,7 @@ section {
     max-height: 700px;
     /*overflow: hidden;*/
     margin: auto;
+    padding-left: 0;
   }
 
    .col-2 {
