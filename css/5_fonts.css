@@ -16,8 +16,6 @@
 /*FONT-COLORS*/
 
 --light-font-color: rgba(51, 51, 51, .5);
-/*--light-font-color: #484848;*/
-
 --dark-font-color: rgba(0, 0, 0, .8);
 --accent-color:red;
 
@@ -45,10 +43,6 @@ font-family: var(--body-font-family);
 }
 
 
-
-
-/*font-color variable*/ 
-
 h1 {
   color: var(--dark-font-color);
   font-weight:700;
@@ -63,15 +57,11 @@ h1 {
   text-align: center;
 }
 
-
-
 p, address{   
   font-size:  var(--body-font-size);           
   letter-spacing: 1.6px;
   line-height: calc(var(--body-font-size) * 1.3);
 }
-
-
 
 .nav ul a.a-link, .btn{
   font-weight: 400;
@@ -89,8 +79,6 @@ color: var(--accent-color);
 .active > a{
   color: var(--accent-color);
 }
-
-
 
 .credits a{
   letter-spacing: .1em;
