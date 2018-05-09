@@ -14,5 +14,5 @@ ExpiresByType image/png "access plus 1 year"
 ExpiresByType image/jpg "access plus 1 year"
 ExpiresByType image/jpeg "access plus 1 year"
 ExpiresByType text/css "access plus 1 month”
-ExpiresByType application/javascript "access plus month year"
+ExpiresByType text/javascript "access plus month year"
 </IfModule>
