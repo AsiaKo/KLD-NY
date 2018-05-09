@@ -29,7 +29,7 @@ function initMap() {
             position: kldny,
             map: map,
             title: 'KLD NY', 
-            icon: "https://github.com/AsiaKo/KLD/blob/master/location-color.png?raw=true"
+            icon: "https://github.com/AsiaKo/KLD-NY/blob/gh-pages/assets/icons/location-color.png?raw=true"
          });
     };
 
