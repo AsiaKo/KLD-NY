@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="235px" height="111px" viewBox="0 0 235 111" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="247px" height="117px" viewBox="0 0 247 117" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
-    <title>Group 8</title>
+    <title>kld</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
-    <g id="Page-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" font-size="150" font-weight="bold">
-        <g id="KLD---Red-K-with-cutouts--Copy-7" transform="translate(-1543.000000, -640.000000)">
-            <g id="Group-8" transform="translate(1533.000000, 597.000000)">
-                <g id="Group-4">
-                    <text id="." font-family="CenturyGothic-Bold, Century Gothic" fill="#FF0000">
-                        <tspan x="212" y="151">.</tspan>
-                    </text>
-                    <text id="kld" font-family="HelveticaNeue-Bold, Helvetica Neue" fill="#332E2E">
-                        <tspan x="0" y="151">kld</tspan>
-                    </text>
+    <g id="Page-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard-2-Copy-2" transform="translate(-1094.000000, -153.000000)">
+            <g id="kld" transform="translate(1094.000000, 153.000000)">
+                <g id="Group-3">
+                    <ellipse id="Oval-3-Copy-4" fill="#F90D0D" cx="232.137312" cy="102.13" rx="14.1373122" ry="14.1300001"></ellipse>
+                    <g id="kld-copy-2" transform="translate(0.182278, 0.928875)" fill="#3F3D3D">
+                        <path d="M170.620087,115 C147.766593,115 129.240175,96.4967682 129.240175,73.671875 C129.240175,50.8469818 147.766593,32.34375 170.620087,32.34375 C193.473582,32.34375 212,50.8469818 212,73.671875 C212,96.4967682 193.473582,115 170.620087,115 Z M170.620087,90.8970452 C180.344801,90.8970452 188.228239,83.1850738 188.228239,73.671875 C188.228239,64.1586762 180.344801,56.4467048 170.620087,56.4467048 C160.895374,56.4467048 153.011936,64.1586762 153.011936,73.671875 C153.011936,83.1850738 160.895374,90.8970452 170.620087,90.8970452 Z" id="Combined-Shape-Copy"></path>
+                        <polygon id="l-copy-2" points="187.707736 0 211.707736 5.52512297 211.707736 75.3669282 187.707736 75.3669282"></polygon>
+                        <polygon id="k-copy" points="0 0.598958333 24.767917 0.598958333 24.767917 63.3682438 51.2329421 35.4373372 78.1909662 35.4373372 44.6694596 72.0078939 82.5173035 114.9139 53.7869814 114.9139 23.7208788 79.935262 23.7208788 114.9139 1 114.9139"></polygon>
+                    </g>
                 </g>
             </g>
         </g>
