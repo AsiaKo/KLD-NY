@@ -21,7 +21,7 @@
 
 /*FONT SIZES*/
 --header-font-size: calc(46px + .2vmin);
---body-font-size: calc(15px + .2vmin);
+--body-font-size: calc(16px + .15vmin);
 --sm-font-size:calc(10px + .1vmax);
 --xs-font-size:8px;
 }
