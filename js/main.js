@@ -4,30 +4,6 @@
    ========================================================================== */
 "use strict";
 
-function initMap() {
-
-        var kldny = {lat: 40.7429012, lng: -73.98413819999996};
-        var map = new google.maps.Map(document.getElementById("map"), {
-            zoom: 16,
-            streetViewControl:false, 
-            center: kldny,
-            styles: [{
-            featureType: "",
-            elementType:"all",
-            stylers:[ 
-              {"saturation": -100}, 
-              {"gamma": 0.95} 
-              ]
-          }]
-        });
-
-        var marker = new google.maps.Marker({
-            position: kldny,
-            map: map,
-            title:"KLD NY", 
-            icon:"https://github.com/AsiaKo/KLD-NY/blob/gh-pages/assets/icons/location-color.png?raw=true"
-         });
-    }
 
 
 
@@ -143,50 +119,77 @@ function check_if_in_view() {
   
   // --------LIGHTSLIDER -------------  
 
-$(document).ready(function() {    
-  $('#lightSlider').lightSlider({
-    item:1,
-    loop: true,
-    controls: false,
-    speed: 2000,
-    auto: true,
-    pause: 6000,
-    pauseOnHover: true,
-    mode: 'slide',
-  });
+// $(document).ready(function() {    
+//   $('#lightSlider').lightSlider({
+//     item:1,
+//     loop: true,
+//     controls: false,
+//     speed: 2000,
+//     auto: true,
+//     pause: 6000,
+//     pauseOnHover: true,
+//     mode: 'slide',
+//   });
 
-});
+// });
 
 
 
   // --------LIGHTGALLERY -------------  
 
-$(document).ready(function(){
+// $(document).ready(function(){
 
-  $('#srcset').lightGallery({
-    thumbnail:false,
+//   $('#srcset').lightGallery({
+//     thumbnail:false,
 
-    showThumbByDefault: false, 
-    speed: 1000, 
-    easing: 'ease',
-  }); 
-
-});
-
+//     showThumbByDefault: false, 
+//     speed: 1000, 
+//     easing: 'ease',
+//   }); 
 
 
   // -------- RELLAX -------------  
 
 
-let rellax = new Rellax('.rellax', {
-    speed: -2,
-    center: true,
-    round:true,
-    vertical: true,
-    horizontal: false
-  });
+
+// });
 
 
 
+  // -------- CURRENT YEAR -------------  
+
+
+
+let date = new Date().getFullYear();
+
+document.querySelector(".year").innerHTML = date;
+
+
+  // ------- CUSTOM GOOGLE MAP-------------  
+
+function initMap() {
+
+        var kldny = {lat: 40.7429012, lng: -73.98413819999996};
+        var map = new google.maps.Map(document.getElementById("map"), {
+            zoom: 16,
+            streetViewControl:false, 
+            center: kldny,
+            styles: [{
+            featureType: "",
+            elementType:"all",
+            stylers:[ 
+              {"saturation": -100}, 
+              {"gamma": 0.95} 
+              ]
+          }]
+        });
+
+        var marker = new google.maps.Marker({
+            position: kldny,
+            map: map,
+            title:"KLD NY", 
+            icon:"https://github.com/AsiaKo/KLD-NY/blob/gh-pages/assets/icons/location-color.png?raw=true"
+         });
+    }
 
 

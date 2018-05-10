@@ -199,10 +199,7 @@
 
 
 	<footer class="footer">
-		<div class="copy">© KLD NY 
-			<script type="text/javascript"> document.write(new Date().getFullYear());</script>
-		</div>
-
+	<div class="copy">© KLD NY <span class="year"></span></div>
 		<p class="credits">website by <a data-email="joannasiakozik@gmail.com" href="mailto:joannasiakozik@gmail.com?subject=New Project Inquiry" > asiako<span class="red-element">.</span> </a></p>
 
 		<ul class="social-items">
@@ -240,10 +237,14 @@
 
 <!-- A jQuery plugin that adds cross-browser mouse wheel support. (Optional) -->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
-  <script type="text/javascript" src="js/vendor/lightgallery.min.js"></script>
+
+    <script type="text/javascript" src="js/vendor/lightgallery.min.js"></script>
+   
+  
+
   <script type="text/javascript" src="js/vendor/picturefill.min.js"></script>
 
-  <script type="text/javascript" src="js/main.min.js"></script>
+
 
 <!-- lightgallery plugins -->
   <script type="text/javascript" async src="js/vendor/lg-thumbnail.js"></script>
@@ -251,14 +252,16 @@
   <script type="text/javascript" async src="js/vendor/lg-share.js"></script>
   <script type="text/javascript" async src="js/vendor/lg-autoplay.js"></script>
 
+   <script type="text/javascript" src="js/main.js"></script>
+
   <script >
-    // $('#srcset').lightGallery({
-    //   thumbnail:false,
-    //   share: false,
-    //   showThumbByDefault: false, 
-    //   speed: 1000, 
-    //   easing: 'ease',
-    // }); 
+    $('#srcset').lightGallery({
+      thumbnail:false,
+      share: false,
+      showThumbByDefault: false, 
+      speed: 1000, 
+      easing: 'ease',
+    }); 
   </script>
 
 </body>
