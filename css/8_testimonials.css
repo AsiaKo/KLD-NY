@@ -92,12 +92,11 @@
 .testimonial .testimonial-name {
   color: var(--dark-font-color);
   font-size: var(--sm-font-size);
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 0;
   padding: 0;
   text-transform: uppercase;
 }
-
 
 
 /*-----------LIGHTSLIDER CUSTOM COLORS -------------*/

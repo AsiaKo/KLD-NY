@@ -3,11 +3,28 @@
      FONTS.CSS
    ========================================================================== */
 
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,700');
 
-/*@import url('https://fonts.googleapis.com/css?family=Montserrat:300,700');*/
-/*@import url('https://fonts.googleapis.com/css?family=Lato:300,700');*/
-@import url('https://fonts.googleapis.com/css?family=Poppins:200,400,600');
 
+:root {
+
+/*FONT-FAMILY*/
+
+--body-font-family:  'Century Gothic',"Avenir", 'Montserrat', sans-serif;
+
+
+/*FONT-COLORS*/
+
+--light-font-color: rgba(51, 51, 51, .5);
+--dark-font-color: rgba(0, 0, 0, .8);
+--accent-color:red;
+
+/*FONT SIZES*/
+--header-font-size: calc(46px + .2vmin);
+--body-font-size: calc(14px + .25vmin);
+--sm-font-size:calc(10px + .1vmax);
+--xs-font-size:8px;
+}
 
 
 body{
@@ -19,38 +36,37 @@ font-family: var(--body-font-family);
 
 }
 
-
-/*font-color variable*/ 
-
-h1 {
-  color: var(--dark-font-color);
-  font-weight:900;
-  letter-spacing: 1.2px;
-  font-size: var(--header-font-size);
-/*  margin-bottom: var(--margin-bottom);*/
-  font-family: "avenir", sans-serif;
+@media (min-width: 1024px) {
+  :root {
+    --header-font-size: calc(56px + .2vmin);
+  }
 }
 
 
-h2 {
-    margin-bottom: var(--margin-bottom);
+h1 {
+  color: var(--dark-font-color);
+  font-weight:700;
+  letter-spacing: 1.2px;
+  font-size: var(--header-font-size);
+}
+
+.home  .col-1 h1 {
+  color: white;
+  font-size: calc(30px + 5vmin);
+  font-weight: 700;
+  text-align: center;
 }
 
 p, address{   
   font-size:  var(--body-font-size);           
-  letter-spacing: 1.7px;
-  line-height: calc(var(--body-font-size) * 1.4);
-  padding: .2em;
+  letter-spacing: 1.6px;
+  line-height: calc(var(--body-font-size) * 1.3);
 }
-
-.contact .contact-items p {
-   margin: auto 0;
-  }
 
 .nav ul a.a-link, .btn{
   font-weight: 400;
   font-size: var(--body-font-size);
-  letter-spacing: 1.8px;
+  letter-spacing: 2px;
   text-transform: uppercase;
   color: var(--light-font-color);
 }
@@ -63,8 +79,6 @@ color: var(--accent-color);
 .active > a{
   color: var(--accent-color);
 }
-
-
 
 .credits a{
   letter-spacing: .1em;
