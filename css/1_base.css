@@ -2,29 +2,6 @@
     BASE.CSS
    ========================================================================== */
 
-*, *:before , *:after{
-  margin:0;
-  padding: 0;
-  box-sizing: border-box;
-  touch-action: manipulation;
- /* border: 1px solid red;*/
-}
-
-
-html, body {
-  max-width: 100%;
-  overflow-x: hidden; /*REMOVES HORIZONTAL SCROLLBAR THE ABOVE CREATES*/
-  margin-top: 0px; /*COMPENSATES THE HORIZONTAL SCROLLBAR*/
-  background: #fff;
-  margin-left: calc(100vw - 100%); /*fix for jumping content does not work :(*/
-
-}
-
-body {
-  background-color: var(--body-background-color);
-
-}
-
 
 /*--------VARIABLES---------------*/
 
@@ -52,6 +29,29 @@ body {
 
 /*--------END VARIABLES---------------*/
 
+
+*, *:before , *:after{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+  touch-action: manipulation;
+ /* border: 1px solid red;*/
+}
+
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden; /*REMOVES HORIZONTAL SCROLLBAR THE ABOVE CREATES*/
+  margin-top: 0px; /*COMPENSATES THE HORIZONTAL SCROLLBAR*/
+  background: #fff;
+  margin-left: calc(100vw - 100%); /*fix for jumping content does not work :(*/
+
+}
+
+body {
+  background-color: var(--body-background-color);
+
+}
 
 
 
@@ -85,8 +85,8 @@ h1 {
 }
 
 
-p {
-margin-bottom: calc(var(--margin-bottom)/ 1.2);
+.col-1 p {
+margin-bottom: calc(var(--body-font-size) * 1.2);
 }
 
 a {

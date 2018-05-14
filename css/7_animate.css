@@ -116,7 +116,7 @@
   width: 0;
   position: absolute;
   right: 5%;
-  top: calc(100vh - 120px);
+  top: calc(100vh - 80px);
   opacity: 1;
   background-color: var(--accent-color, red);
   transform: all 6.7s 2s;
