@@ -50,7 +50,6 @@ html, body {
 
 body {
   background-color: var(--body-background-color);
-
 }
 
 
@@ -86,7 +85,7 @@ h1 {
 
 
 .col-1 p {
-margin-bottom: calc(var(--body-font-size) * 1.2);
+margin-bottom: var(--body-font-size);
 }
 
 a {
