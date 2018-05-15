@@ -22,7 +22,7 @@
 /*FONT SIZES*/
 --header-font-size: calc(46px + .2vmin);
 --body-font-size: calc(16px + .15vmin);
---sm-font-size:calc(10px + .15vmax);
+--sm-font-size:calc(11px + .15vmax);
 --xs-font-size:8px;
 }
 
@@ -86,6 +86,7 @@ color: var(--accent-color);
 .testimonial .testimonial-quote {
  font-size: var(--sm-font-size);
   font-style: italic;
+  line-height: 1.35;
 }
 
 .credits a{
