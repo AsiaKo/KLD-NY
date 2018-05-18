@@ -83,10 +83,9 @@
 }
 
 .testimonial .testimonial-quote {
-  font-size: .9em;
+
   height: 100%;
-  font-style: italic;
-  padding: 1vmin 0;
+  padding: 1.5vmax 0;
 }
 
 .testimonial .testimonial-name {

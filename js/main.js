@@ -5,8 +5,6 @@
 "use strict";
 
 
-
-
 $(document).ready(function(){
 
    var scrollLink = $(".scroll");
@@ -55,9 +53,6 @@ $(document).ready(function(){
               $("nav, header").removeClass("scroll-nav");        
               }
           });
-
-
-
 
 // ANIMATION FADE IN ON SCROLL
 
@@ -115,49 +110,9 @@ function check_if_in_view() {
         return false;   
 });  
 
-    
-  
-  // --------LIGHTSLIDER -------------  
+   
 
-// $(document).ready(function() {    
-//   $('#lightSlider').lightSlider({
-//     item:1,
-//     loop: true,
-//     controls: false,
-//     speed: 2000,
-//     auto: true,
-//     pause: 6000,
-//     pauseOnHover: true,
-//     mode: 'slide',
-//   });
-
-// });
-
-
-
-  // --------LIGHTGALLERY -------------  
-
-// $(document).ready(function(){
-
-//   $('#srcset').lightGallery({
-//     thumbnail:false,
-
-//     showThumbByDefault: false, 
-//     speed: 1000, 
-//     easing: 'ease',
-//   }); 
-
-
-  // -------- RELLAX -------------  
-
-
-
-// });
-
-
-
-  // -------- CURRENT YEAR -------------  
-
+  // -------- CURRENT YEAR  FOOTER-------------  
 
 
 let date = new Date().getFullYear();
@@ -193,3 +148,26 @@ function initMap() {
     }
 
 
+document.addEventListener("DOMContentLoaded", function() {
+  var lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
+
+  if ("IntersectionObserver" in window) {
+    let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          let lazyImage = entry.target;
+          lazyImage.src = lazyImage.dataset.src;
+          lazyImage.srcset = lazyImage.dataset.srcset;
+          lazyImage.classList.remove("lazy");
+          lazyImageObserver.unobserve(lazyImage);
+        }
+      });
+    });
+
+    lazyImages.forEach(function(lazyImage) {
+      lazyImageObserver.observe(lazyImage);
+    });
+  } else {
+    // Possibly fall back to a more compatible method here
+  }
+});

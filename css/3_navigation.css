@@ -174,7 +174,6 @@ header.overlay-close {
   position: absolute;
   top: calc(50% - 7.5px); /*to center vertically on nav: half of the nav height - half of the nav-burger - hacky way :(;*/
   width: 24px;
-  height: 100%;
   right: 0;  /*padding already on the nav */
   transform: rotate(0deg);
   transition: .5s ease-in-out;
@@ -231,6 +230,10 @@ header.overlay-close {
   .nav-toggle {
     display: inline-block;
     z-index: 101;
+    position: absolute;
+    right: 0;
+    width: 42px;
+    height: 42px;
   }
 
   header, .nav {
