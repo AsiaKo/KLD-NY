@@ -45,6 +45,7 @@ a[data-wipe]  {
 
 [data-wipe]:before, a[data-wipe]:after{
   color: white;
+  font-weight: bolder;
   background: var(--accent-color);
 }
 

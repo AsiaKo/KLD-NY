@@ -5,13 +5,11 @@
 
 /* ------------FADE IN ANIMATION ON SCROLL  ---------------*/
 
-
 .animate {
   opacity: 0;
   position: relative;
   will-change: opacity;  
 }
-
 
 .fade-up {
     animation-name: fade-up;
@@ -20,7 +18,6 @@
     animation-fill-mode: both;
     animation-delay: .6s;
 }
-
 
 @keyframes fade-up{
     0% {
@@ -58,11 +55,9 @@
   animation-delay: 500ms;
 }
 
-
 [data-anim-delay="600"] {
   animation-delay: 500ms;
 }
-
 
 [data-anim-delay="1000"] {
   animation-delay: 1000ms;
@@ -89,7 +84,7 @@
 .line{
   position: fixed;
   top: calc(100% - 45px);
-  right:5%;
+  right:2%;
   height: 30px;
   width:60px;
   text-align: center;
@@ -100,14 +95,13 @@
 
 .line:before{
   position: absolute;
-  left:50%;
+  left:60%;
   top:50%;
   transform: translate(-50%, -50%);
   color: var(--light-font-color);
-  line-height: 15px;
-  letter-spacing: 1.9px;
-  font-family: 'Helvetica', 'Century Gothic', sans-serif;
   font-size: var(--xs-font-size, 8px);
+  line-height: 15px;
+  letter-spacing: 1.6px;
   text-transform: uppercase;
 }
 
@@ -122,24 +116,16 @@
   transform: all 6.7s 2s;
   }
 
-/*
-@media (min-width: 1025px) {
-  .line.line-scroll {
-    top: calc(100vh - 100px);
-  }
-  
-}*/
-
-
 .line-scroll:before {
   content: "scroll";
+  writing-mode: vertical-lr;
 }
 
 .line-scroll::after {
   content: "";
   position: absolute;
-  top: -60px;
-  right:50%;
+  top: -20px;
+  right: 10px;
   width: 1px;
   background-color: var(--accent-color, red);
   animation: scroll 2s  5s ease-out infinite;
@@ -162,22 +148,22 @@
 }
 
 
-@media screen and (max-width: 1024px) {
+@media screen and (min-width: 1024px) {
 
-  .line-scroll {
-    right: 2%;
-  }
-  .line-scroll::after {
-    top: -20px;
-    right: 10px;
+  .line.line-scroll {
+    top: calc(100vh - 60px);
   }
 
   .line-scroll:before {
-    left:60%;
-    writing-mode: vertical-lr;
+    left: 50%;
+    writing-mode: horizontal-tb;
   }
+  .line-scroll::after {
+    top: -60px;
+    right: 50%;
+    width: 1px;
+  } 
 }
-
 
 /* -------- BACK TO TOP --------- */
 
@@ -186,13 +172,14 @@
   transform: translateY(30px);
   cursor: pointer;
   z-index:9;
-  background-color: rgba(255, 255, 255, .5);
+  background-color: rgba(255, 255, 255, .6);
   transition: all .3s .3s;
 }
 
 
 .line-top:before {
   content: "to top";
+  left:50%;
 }
 
 .line-top::after {
@@ -242,7 +229,6 @@
     transform: translateX(0px);
   }
 }
-
 
 /* ------------- END SCROLL ANIMATION ---------------*/
 
