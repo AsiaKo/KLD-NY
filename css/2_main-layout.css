@@ -32,7 +32,7 @@
 /*--------LANDING PAGE------------- */
 
 .home { 
-  background-image: url("../img/1049/sm-11.jpg");
+  background-image: url("../img/250West/lg-03.jpg");
   background-color: rgba(0, 0, 0, 0.25);
   background-size: cover;
   background-repeat: no-repeat;
@@ -48,14 +48,14 @@
 
 @media screen and (min-width: 400px) and (max-width: 1023px){
   .home {
-    background-image: url("../img/1049/tablet-p-11.jpg");
+    background-image: url("../img/250West/lg-03.jpg");
   }
 }
 
 
 @media screen and (min-width: 1024px) {
   .home {
-    background-image: url("../img/1049/lg-11.jpg");
+    background-image: url("../img/250West/lg-03.jpg");
     height: calc(100vh - 70px);
   }
 }

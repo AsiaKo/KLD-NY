@@ -171,3 +171,27 @@ document.addEventListener("DOMContentLoaded", function() {
     // Possibly fall back to a more compatible method here
   }
 });
+
+
+  // $(document).ready(function() {    
+  //   $('#lightSlider').lightSlider({
+  //     item:1,
+  //     autoWidth:true,
+  //     // loop: true,
+  //     controls: false,
+  //     speed: 2000,
+  //     auto: false,
+  //     pause: 6000,
+  //     pauseOnHover: true,
+  //     mode: 'slide',
+  //   });
+  // });
+
+
+ 
+  //   $(document).ready(function() {
+  //       var slider = $("#light-slider").lightSlider();
+  //       slider.refresh();
+  //   });
+
+

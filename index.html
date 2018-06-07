@@ -66,8 +66,8 @@
 
 					<section id="home" class="home" role="banner">
 						<div class="col-1 rellax" data-rellax-speed="-3">
-							<h1 class="animate">Space<span class="red-element">.</span></h1>
-							<h1 class="animate" data-anim-delay="1000">Transformed<span class="red-element">.</span></h1>
+							<!-- <h1 class="animate">Space<span class="red-element">.</span></h1>
+							<h1 class="animate" data-anim-delay="1000">Transformed<span class="red-element">.</span></h1> -->
 						</div>
 
 						<div class="line line-scroll"></div>
@@ -300,20 +300,7 @@
 
  	<script type="text/javascript" async src="js/vendor/lightslider.min.js"></script>
 
-	<script>
-	$(document).ready(function() {    
-	  $('#lightSlider').lightSlider({
-	    item:1,
-	    // loop: true,
-	    controls: false,
-	    speed: 2000,
-	    auto: false,
-	    pause: 6000,
-	    pauseOnHover: true,
-	    mode: 'slide',
-	  });
-	});
-	</script>
+	
 
 	<script src="js/vendor/rellax.min.js"></script>   
  	
@@ -328,6 +315,28 @@
 	</script>
 
 	<script type="text/javascript" async src="js/main.js"></script>
+	<script>
+	$(document).ready(function() {    
+	  $('#lightSlider').lightSlider({
+	    item:1,
+	    // autoWidth:true,
+	    // loop: true,
+	    controls: false,
+	    speed: 2000,
+	    auto: false,
+	    pause: 6000,
+	    pauseOnHover: true,
+	    mode: 'slide',
+	  });
+	});
+	</script>
+<!-- 
+	<script type="text/javascript">
+    $(document).ready(function() {
+        var slider = $("#light-slider").lightSlider();
+        slider.refresh();
+    });
+</script> -->
 
 
 	<script  type="text/javascript" async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB6VXCVtjWl8I7ZnqLSHxIWOaFqEMVskmc&callback=initMap">
