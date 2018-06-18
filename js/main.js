@@ -117,7 +117,7 @@ function check_if_in_view() {
 
 let date = new Date().getFullYear();
 
-document.querySelector(".year").innerHTML = date;
+document.querySelector(".year").textContent = date;
 
 
   // ------- CUSTOM GOOGLE MAP-------------  
