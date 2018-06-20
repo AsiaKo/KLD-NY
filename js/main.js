@@ -124,7 +124,8 @@ document.querySelector(".year").textContent = date;
 
 function initMap() {
 
-        var kldny = {lat: 40.7429012, lng: -73.98413819999996};
+        // var kldny = {lat: 40.7439012, lng: -73.98423819999996};
+         var kldny = {lat: 40.743901, lng: -73.984238};
         var map = new google.maps.Map(document.getElementById("map"), {
             zoom: 16,
             streetViewControl:false, 
@@ -139,11 +140,22 @@ function initMap() {
           }]
         });
 
+        var image = {
+          url: "https://github.com/AsiaKo/KLD-NY/blob/gh-pages/assets/icons/location-color.png?raw=true", 
+            size: new google.maps.Size(63, 63),
+          // The origin for this image is (0, 0).
+          origin: new google.maps.Point(0, 0),
+          // The anchor for this image is the base of the flagpole at (0, 32).
+          anchor: new google.maps.Point(14,16),
+        }
+
         var marker = new google.maps.Marker({
             position: kldny,
+          
             map: map,
             title:"KLD NY", 
-            icon:"https://github.com/AsiaKo/KLD-NY/blob/gh-pages/assets/icons/location-color.png?raw=true"
+            icon: image,
+            // icon:"https://github.com/AsiaKo/KLD-NY/blob/gh-pages/assets/icons/location-color.png?raw=true"
          });
     }
 
