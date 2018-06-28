@@ -24,6 +24,18 @@ $(document).ready(function(){
     }  // End if
   });
 
+    $(window).scroll(function() {
+    var scrollDistance = $(window).scrollTop();
+    // Assign active class to nav links while scrolling
+    $('section').each(function(i) {
+        if ($(this).position().top <= scrollDistance) {
+            $('.nav .active-link').removeClass('active-link');
+            $('.nav a').eq(i).addClass('active-link');
+            console.log('active-link');
+        }
+    });
+}).scroll();
+
 
 	// BURGER MENU/ OVERLAY NAV OPEN
 
@@ -33,12 +45,19 @@ $(document).ready(function(){
     console.log("overlay open");
     $("header").toggleClass("overlay-open");
     $(".menu-items").toggleClass("open");
+
   });
 
 
   $("a").on("click", function(){
-  $("header").removeClass("overlay-open");
+
+     setTimeout(function() {
+ $("header").removeClass("overlay-open");
+  }, 800);
+
+     setTimeout(function() {
   $(".menu-items, #nav-burger").removeClass("open");
+  }, 800);
   });
 
 // -------- END ANIMATIONS ON SCROLL -------------
@@ -110,8 +129,6 @@ function check_if_in_view() {
         return false;   
 });  
 
-   
-
   // -------- CURRENT YEAR  FOOTER-------------  
 
 
@@ -124,8 +141,7 @@ document.querySelector(".year").textContent = date;
 
 function initMap() {
 
-        // var kldny = {lat: 40.7439012, lng: -73.98423819999996};
-         var kldny = {lat: 40.743901, lng: -73.984238};
+        var kldny = {lat: 40.743901, lng: -73.984238};
         var map = new google.maps.Map(document.getElementById("map"), {
             zoom: 16,
             streetViewControl:false, 
@@ -143,67 +159,15 @@ function initMap() {
         var image = {
           url: "https://github.com/AsiaKo/KLD-NY/blob/gh-pages/assets/icons/location-color.png?raw=true", 
             size: new google.maps.Size(63, 63),
-          // The origin for this image is (0, 0).
-          origin: new google.maps.Point(0, 0),
-          // The anchor for this image is the base of the flagpole at (0, 32).
-          anchor: new google.maps.Point(14,16),
+            origin: new google.maps.Point(0, 0),
+            anchor: new google.maps.Point(14, 16),
         }
 
         var marker = new google.maps.Marker({
             position: kldny,
-          
             map: map,
             title:"KLD NY", 
             icon: image,
-            // icon:"https://github.com/AsiaKo/KLD-NY/blob/gh-pages/assets/icons/location-color.png?raw=true"
+           
          });
     }
-
-
-document.addEventListener("DOMContentLoaded", function() {
-  var lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
-
-  if ("IntersectionObserver" in window) {
-    let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          let lazyImage = entry.target;
-          lazyImage.src = lazyImage.dataset.src;
-          lazyImage.srcset = lazyImage.dataset.srcset;
-          lazyImage.classList.remove("lazy");
-          lazyImageObserver.unobserve(lazyImage);
-        }
-      });
-    });
-
-    lazyImages.forEach(function(lazyImage) {
-      lazyImageObserver.observe(lazyImage);
-    });
-  } else {
-    // Possibly fall back to a more compatible method here
-  }
-});
-
-
-  // $(document).ready(function() {    
-  //   $('#lightSlider').lightSlider({
-  //     item:1,
-  //     autoWidth:true,
-  //     // loop: true,
-  //     controls: false,
-  //     speed: 2000,
-  //     auto: false,
-  //     pause: 6000,
-  //     pauseOnHover: true,
-  //     mode: 'slide',
-  //   });
-  // });
-
-
- 
-  //   $(document).ready(function() {
-  //       var slider = $("#light-slider").lightSlider();
-  //       slider.refresh();
-  //   });
-
-

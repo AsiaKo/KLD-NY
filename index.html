@@ -30,7 +30,7 @@
 
 	<header class="fixed" role="navigation">
 		<nav  id="nav" class="nav">  
-			<a class="scroll logo" href="index.html#home" title="back to the homepage">
+			<a class="scroll a-link logo" href="index.html#home" title="back to the homepage">
 				<img src="assets/logo.png"  class="logo" height="30" alt="logo" > 
 			</a>
 
@@ -291,12 +291,14 @@
 			</li>
 		</ul>
 	</footer>
-	<script async  src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-	 <!-- Fall back to a local copy of jQuery if the CDN fails -->
+	<!--  Fall back to a local copy of jQuery if the CDN fails
 	<script>
 	window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\/script>');
-	</script>
+	</script> -->
+<!-- 
+ 	<script src="js/vendor/jquery.min.js"> </script> -->
 
  	<script type="text/javascript" async src="js/vendor/lightslider.min.js"></script>
 
@@ -314,7 +316,6 @@
 	});
 	</script>
 
-	<script type="text/javascript" async src="js/main.js"></script>
 	<script> 
 	 $(document).ready(function() {    
 	  var slider = $('#lightSlider').lightSlider({
@@ -330,9 +331,47 @@
 	</script>
 
 
+	<script type="text/javascript" src="js/main.js"></script>
 
-	<script  type="text/javascript" async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB6VXCVtjWl8I7ZnqLSHxIWOaFqEMVskmc&callback=initMap">
+	<script  type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB6VXCVtjWl8I7ZnqLSHxIWOaFqEMVskmc&callback=initMap">
+
+	 // ------- CUSTOM GOOGLE MAP-------------  
+
+function initMap() {
+
+        var kldny = {lat: 40.743901, lng: -73.984238};
+        var map = new google.maps.Map(document.getElementById("map"), {
+            zoom: 16,
+            streetViewControl:false, 
+            center: kldny,
+            styles: [{
+            featureType: "",
+            elementType:"all",
+            stylers:[ 
+              {"saturation": -100}, 
+              {"gamma": 0.95} 
+              ]
+          }]
+        });
+
+        var image = {
+          url: "https://github.com/AsiaKo/KLD-NY/blob/gh-pages/assets/icons/location-color.png?raw=true", 
+            size: new google.maps.Size(63, 63),
+            origin: new google.maps.Point(0, 0),
+            anchor: new google.maps.Point(14, 16),
+        }
+
+        var marker = new google.maps.Marker({
+            position: kldny,
+            map: map,
+            title:"KLD NY", 
+            icon: image,
+           
+         });
+    };
+
     </script>
+
 	
 </body>
 </html>

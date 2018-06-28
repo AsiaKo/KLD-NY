@@ -74,13 +74,9 @@ a.a-link:hover {
 color: var(--accent-color);
 }
 
-.active > a{
-  color: var(--accent-color);
+.nav ul a.a-link.active-link {
+color: var(--accent-color);
 }
-
-
-
-
 
 .testimonial .testimonial-quote {
  font-size: var(--sm-font-size);
@@ -97,7 +93,6 @@ color: var(--accent-color);
   color: var(--accent-color); 
 }
 
-
 .copy, .credits{
   font-size: 12px;
   font-size: var(--sm-font-size);
@@ -108,7 +103,6 @@ address {
   font-size: var(--body-font-size);
   color: var(--light-font-color);
 }
-
 
 .contact .a-link   {
   color: var(--dark-font-color);
