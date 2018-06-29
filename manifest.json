@@ -4,6 +4,7 @@
   "start_url": "index.html",
   "display": "standalone",
   "background_color": "#fff",
+  "theme-color":"#fff",
   "description": "High End General Contracting Services",
   "icons": [{
     "src": "img/favicon/favicon-16x16.png",
@@ -25,5 +26,11 @@
     "src": "img/favicon/apple-touch-icon-152x152.png",
     "sizes": "152x152",
     "type": "image/png"
-  }],
+  }, {
+    "src": "img/favicon/apple-touch-icon-512x512.png",
+    "sizes": "512x1512",
+    "type": "image/png"
+  }
+],
+  "splash_pages": null
 }
