@@ -7,15 +7,17 @@
 /*WORK WITH US BTN*/
 
 a.btn {    
-  cursor:pointer;
+
   width: fit-content;/*  does not work in IE/Edge*/
   box-shadow: 0px 27px 36px -31px rgba(0,0,0,0.75);
   transition: box-shadow 0.3s ease-in-out;
+  cursor: inherit;
 }
 
 a.btn:hover {
   box-shadow: 0px 12px 36px -14px rgba(0,0,0,0.75);
   transition: 0.3s ease-in-out;
+  cursor: url(../assets/cursor-dot-click2.png), pointer;
 }
 
 .col-1 .btn {
