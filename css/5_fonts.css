@@ -86,7 +86,6 @@ color: var(--accent-color);
 
 .credits a{
   letter-spacing: .1em;
-  cursor: pointer;
 }
 
 .credits a:hover{

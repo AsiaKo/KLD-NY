@@ -46,13 +46,27 @@
   height: 94vw;
   margin:3vw auto 4vw auto; 
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  border-collapse: separate;      
+  border-collapse: separate;  
+  cursor:url("assets/plus.png"), auto; 
+  /*hover effect*/
+  background-color: #000;
 }
 
 .portfolio-item img {
-  width: 100%;
-  height: 100%;
   object-fit: cover;
+  width: calc(100% + 30px);  /*hover effect / length added to offset tx in translate3D */
+  height: 100%;
+  /*hover effect*/
+  transition: opacity 0.35s, transform 0.35s;
+  opacity: 1;
+  transform: translate3d(-30px,0,0) scale(1.12);   
+}
+
+
+.portfolio-item img:hover {
+  transform: translate3d(0,0,0) scale(1);
+  filter: grayscale(100%);
+  opacity: 0.3;
 }
 
 @media only screen and (max-width: 1024px) and (min-width: 500px)  {
@@ -133,6 +147,7 @@ div > img {
            <!-- 250 West PROJECT -->
             <div class="portfolio-item" data-src="img/250West/lg-03.jpg" data-srcset="img/250West/lg-03.jpg 600w, img/250West/lg-03.jpg.jpg 800w, img/250West/lg-03.jpg 1080w"> 
             <img class="img"  src="img/250West/lg-03.jpg" alt="custom white kitchen cabinetry" />
+            <p>Project Name and description goes here</p>
           </div>
 
           <div class="portfolio-item" data-src="img/250West/lg-01.jpg" data-srcset="img/250West/lg-01.jpg 600w, img/250West/lg-01.jpg.jpg 800w, img/250West/lg-01.jpg 1080w"> 

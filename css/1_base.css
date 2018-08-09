@@ -45,11 +45,15 @@ html, body {
   margin-top: 0px; /*COMPENSATES THE HORIZONTAL SCROLLBAR*/
   background: #fff;
   margin-left: calc(100vw - 100%); /*fix for jumping content does not work :(*/
-
+  cursor:url("../assets/cursor-dot.png"), auto;
 }
 
 body {
   background-color: var(--body-background-color);
+}
+
+a, a[data-wipe]{
+  cursor: url("../assets/cursor-dot-click.png"), pointer;
 }
 
 

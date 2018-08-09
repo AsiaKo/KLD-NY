@@ -81,7 +81,7 @@
     text-align: center;
 }
 .lSSlideOuter .lSPager.lSpg > li {
-    cursor: pointer;
+ /*   cursor: pointer;*//* custom cursor: */
     display: inline-block;
     padding: 0 5px;
 }
@@ -158,7 +158,7 @@
     top: 50%;
     height: 32px;
     background-image: url('../img/controls.png');
-    cursor: pointer;
+  /*  cursor: pointer;*/ /* custom cursor: */
     position: absolute;
     z-index: 99;
     margin-top: -16px;
