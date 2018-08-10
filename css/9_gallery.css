@@ -86,7 +86,7 @@ span.lg-toggle-thumb  {
 
 .lg-toolbar .lg-icon:hover {
    color:var(--accent-color) !important;
-  cursor: url(../assets/cursor-dot-click.png), pointer;
+  cursor: url(../assets/cursor__link.png), pointer;
 
 }
 
@@ -112,7 +112,7 @@ span.lg-toggle-thumb  {
 
 .lg-actions .lg-next, .lg-actions .lg-prev {
     background-color: rgba(0, 0, 0, .25) !important;
-    cursor: url(../assets/cursor-dot-click.png), pointer;
+    cursor: url(../assets/cursor__link.png), pointer;
 
 
 }
@@ -122,5 +122,12 @@ span.lg-toggle-thumb  {
      END GALLERY.CSS
    ========================================================================== */
 
+/* ==========================================================================
+      Lightslider.css modifications
+   ========================================================================== */
 
 
+
+.lSSlideOuter .lSPager.lSpg > li {
+  cursor: url(../assets/cursor__link.png), auto;
+}

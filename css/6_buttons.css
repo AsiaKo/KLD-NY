@@ -17,7 +17,7 @@ a.btn {
 a.btn:hover {
   box-shadow: 0px 12px 36px -14px rgba(0,0,0,0.75);
   transition: 0.3s ease-in-out;
-  cursor: url(../assets/cursor-dot-click2.png), pointer;
+  cursor: url(../assets/cursor__link-2.png), pointer;
 }
 
 .col-1 .btn {

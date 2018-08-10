@@ -51,6 +51,7 @@ footer {
 
 .social-items li {
     padding:10px;
+    cursor: url(../assets/cursor__link.png), auto;
 }
 
 .icon:hover {

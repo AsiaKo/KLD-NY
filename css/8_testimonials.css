@@ -103,9 +103,11 @@
 
 .lSSlideOuter .lSPager.lSpg > li a {
   background-color: var(--light-font-color) !important;
+      cursor: url(../assets/cursor__link.png), auto;
 }
 .lSSlideOuter .lSPager.lSpg > li:hover a, .lSSlideOuter .lSPager.lSpg > li.active a {
   background-color: var(--accent-color) !important;
+  cursor: url(../assets/cursor__link.png), auto;
 }
 
  /* ==========================================================================

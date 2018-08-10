@@ -45,7 +45,7 @@ html, body {
   margin-top: 0px; /*COMPENSATES THE HORIZONTAL SCROLLBAR*/
   background: #fff;
   margin-left: calc(100vw - 100%); /*fix for jumping content does not work :(*/
-  cursor:url("../assets/cursor-dot.png"), auto;
+  cursor:url("../assets/cursor__body.png"), auto;
 }
 
 body {
@@ -53,7 +53,7 @@ body {
 }
 
 a, a[data-wipe]{
-  cursor: url("../assets/cursor-dot-click.png"), pointer;
+  cursor: url("../assets/cursor__link.png"), pointer;
 }
 
 
