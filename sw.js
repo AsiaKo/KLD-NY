@@ -1,13 +1,12 @@
 const cacheName = 'v1.0';
 
 const cacheAssets = [
-  './'
+  './',
 	'./index.html',
 	'./gallery.html',
 	'./css/main.css',
 	'./js/main.js',
   './img/250West/lg-03.jpg'
-
 ];
 
 
