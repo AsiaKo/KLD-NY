@@ -334,10 +334,12 @@
 	<script  type="text/javascript" async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB6VXCVtjWl8I7ZnqLSHxIWOaFqEMVskmc&callback=initMap">
       </script>
 
-     <script>
+ <!--     <script>
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', function() {
-    navigator.serviceWorker.register('sw.js').then(function(registration) {
+    navigator.serviceWorker
+    	.register('sw.js')
+    	.then(function(registration) {
       // Registration was successful
       console.log('ServiceWorker registration successful with scope: ', registration.scope);
     }, function(err) {
@@ -346,7 +348,7 @@ if ('serviceWorker' in navigator) {
     });
   });
 }
-</script>
+</script> -->
 
 	
 </body>
