@@ -5,8 +5,10 @@ const cacheAssets = [
 	'./index.html',
 	'./gallery.html',
 	'./css/main.css',
+  
 	'./js/main.js',
-  './img/250West/lg-03.jpg'
+  './img/250West/lg-03.jpg',
+  './assets/logo.png'
 ];
 
 
