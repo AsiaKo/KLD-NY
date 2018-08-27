@@ -3,6 +3,7 @@
   "short_name": "KLD",
   "start_url": "index.html",
   "display": "standalone",
+  "orientation": "portrait",
   "background_color": "#FFFFFF",
   "theme_color":"#FFFFFF",
   "description": "High End General Contracting Services",
