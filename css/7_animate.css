@@ -98,7 +98,7 @@
   left:60%;
   top:50%;
   transform: translate(-50%, -50%);
-  color: var(--light-font-color);
+  color: #fff;
   font-size: var(--xs-font-size, 8px);
   line-height: 15px;
   letter-spacing: 1.6px;
@@ -247,8 +247,7 @@
   width: 100%;
   background-color: #fff;
   animation: pageTransition 1s .6s cubic-bezier(0.16, 1.08, 0.38, 0.98) forwards;
-  overflow-x: hidden;
-  
+  overflow-x: hidden; 
 }
 
 @keyframes pageTransition {
