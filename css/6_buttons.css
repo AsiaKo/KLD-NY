@@ -14,15 +14,8 @@ a.btn {
   cursor: inherit;
 }
 
-a.btn:hover {
-  box-shadow: 0px 12px 36px -14px rgba(0,0,0,0.75);
-  transition: 0.3s ease-in-out;
-  cursor: url(../assets/cursor__link-2.png), pointer;
-}
-
 .col-1 .btn {
   margin-bottom: 10px;
-
 }  
 
 .btn-wipe{
@@ -38,7 +31,6 @@ a.btn-cta {
 }
 
 /*WIPE EFFECT BUTTONS*/
-
 
 a[data-wipe]  {
   color:var(--accent-color);
@@ -89,24 +81,11 @@ a[data-wipe]  {
   text-align: center;
 }
 
-[data-wipe]:hover:before {
-  width: 100%;
-  transition: width 0.2s ease-in-out;
-}
-
-[data-wipe]:hover:after {
-  left: 0;
-  text-indent: 0;
-  transition: 0s 0.2s ease-in-out;
-}
-
-
 a.a-link,  .btn{
   font-size: var(--body-font-size);
   letter-spacing: 1px;
   position: relative;
-  text-transform: uppercase;
-  
+  text-transform: uppercase; 
 }
 
  a.a-link:before {
@@ -121,11 +100,30 @@ a.a-link,  .btn{
   transition: all 0.2s ease-in-out 0s;
 }
 
- a.a-link:hover:before {
-  visibility: visible;
-  transform: scaleX(1);
+@media (hover) {
+  a.btn:hover {
+    box-shadow: 0px 12px 36px -14px rgba(0,0,0,0.75);
+    transition: 0.3s ease-in-out;
+    cursor: url(../assets/cursor__link-2.png), pointer;
+  }
+  [data-wipe]:hover:before {
+    width: 100%;
+    transition: width 0.2s ease-in-out;
+  }
+
+  [data-wipe]:hover:after {
+    left: 0;
+    text-indent: 0;
+    transition: 0s 0.2s ease-in-out;
+  }
+  a.a-link:hover:before {
+    visibility: visible;
+    transform: scaleX(1);
+  }
+
 }
 
+ 
 
 
  /* ==========================================================================
