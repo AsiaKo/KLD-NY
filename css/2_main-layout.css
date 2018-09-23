@@ -48,14 +48,14 @@
 
 @media screen and (min-width: 400px) and (max-width: 1023px){
   .home {
-    background-image: url("../img/250West/lg-03.jpg");
+    background-image: url("../img/250West/md-03.jpg");
   }
 }
 
 
-@media screen and (min-width: 1024px) {
+@media screen and (max-width: 400px) {
   .home {
-    background-image: url("../img/250West/lg-03.jpg");
+    background-image: url("../img/250West/sm-03.jpg");
     height: calc(100vh - 70px);
   }
 }
