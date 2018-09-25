@@ -46,14 +46,14 @@
 
 /*MOBILE LARGE AND TABLET*/
 
-@media screen and (min-width: 400px) and (max-width: 1023px){
+@media screen and (min-width: 375px) and (max-width: 1023px){
   .home {
     background-image: url("../img/250West/md-03.jpg");
   }
 }
 
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 374px) {
   .home {
     background-image: url("../img/250West/sm-03.jpg");
     height: calc(100vh - 70px);
