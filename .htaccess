@@ -3,5 +3,10 @@
 ErrorDocument 404 /404.html
 
 
+RewriteCond %{HTTP_HOST} kldny\.com [NC]
+RewriteCond %{SERVER_PORT} 80
+RewriteRule ^(.*)$ https://kldny.com/$1 [R,L]
+
+
 
 
