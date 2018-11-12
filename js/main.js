@@ -4,12 +4,15 @@
    ========================================================================== */
 "use strict";
 
+console.log(" %cHopfully nothing to see here... constructive criticism welcome ", "color: gray; text-transform: uppercase");
+
+
 // Service Worker 
 if('serviceWorker'in navigator) {
   window.addEventListener('load', () =>{
     navigator.serviceWorker
       .register('sw.js')
-      .then(reg => console.log('Service Worker Registered'))
+      // .then(reg => console.log('Service Worker Registered'))
       .catch(err => console.log(`Service Worker: Error: ${err}`))
   })
 }
@@ -41,7 +44,6 @@ $(document).ready(function(){
         if ($(this).position().top <= scrollDistance) {
             $('.nav .active-link').removeClass('active-link');
             $('.nav a').eq(i).addClass('active-link');
-            console.log('active-link');
         }
     });
 }).scroll();
@@ -51,23 +53,19 @@ $(document).ready(function(){
 
   $("#nav-burger").on("click", function(e) {
       e.preventDefault();
-    $(this).toggleClass("open");
-    console.log("overlay open");
     $("header").toggleClass("overlay-open");
     $(".menu-items").toggleClass("open");
 
   });
 
-
   $("a").on("click", function(){
+      setTimeout(function() {
+         $("header").removeClass("overlay-open");
+          }, 800);
 
      setTimeout(function() {
- $("header").removeClass("overlay-open");
-  }, 800);
-
-     setTimeout(function() {
-  $(".menu-items, #nav-burger").removeClass("open");
-  }, 800);
+          $(".menu-items, #nav-burger").removeClass("open");
+          }, 800);
   });
 
 // -------- END ANIMATIONS ON SCROLL -------------
@@ -76,9 +74,9 @@ $(document).ready(function(){
 
   //  CHANGE NAV HEIGHT AND ADD BOX-SHADOW ON SCROLL
 
-        if($(window).scrollTop()> 100)  {
+        if($(window).scrollTop() > 100)  {
             $("nav, header,  .nav-toggle").addClass("scroll-nav"); 
-              }else  {
+              } else  {
               $("nav, header").removeClass("scroll-nav");        
               }
           });
@@ -157,7 +155,6 @@ function initMap() {
             streetViewControl:false, 
             center: kldny,
             styles: [{
-            featureType: "",
             elementType:"all",
             stylers:[ 
               {"saturation": -100}, 
@@ -167,7 +164,7 @@ function initMap() {
         });
 
         var image = {
-          url: "https://github.com/AsiaKo/KLD-NY/blob/gh-pages/assets/icons/location-color.png?raw=true", 
+            url: "https://kldny.com/assets/icons/location-color.png", 
             size: new google.maps.Size(63, 63),
             origin: new google.maps.Point(0, 0),
             anchor: new google.maps.Point(14, 16),
