@@ -1,0 +1,293 @@
+
+ /* ==========================================================================
+     NAVIGATION.CSS
+   ========================================================================== */
+
+
+header {
+  position: fixed;
+  top: 0;
+  left:0;
+  right: 0;
+  width: 100%;
+  height: 90px;  /*main content starts below - if height not set up  - content starts at the top*/
+  display: block;
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.0);
+  transition: all 0.5s ease;
+  z-index: 100;
+
+}
+
+header:after, header:before {
+  content:'';
+  display: block;
+  clear:both;
+}
+
+/*------------- LOGO ------------- */
+
+.logo {
+  position:absolute; /*changed from absolute to push to the middle with wide viewport*/
+  height:4vw;
+  height: calc(30px + 1vw);
+  transition: all 0.5s;
+}
+
+
+/*------------- NAVIGATION ------------- */
+
+.nav{
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: var(--sm-width);
+  max-width: 1920px;
+  height: 90px;
+  transition: 0.5s;
+  z-index: 1;
+  text-align: center;
+  
+}
+
+
+.nav ul {
+  margin: 0 auto;
+  list-style: none;
+  display: flex;
+}
+
+.nav li {
+    padding: 0 3vw;
+}
+
+@media screen and (min-width: 1024px) {
+  .nav {
+    width: 95%;  /*fallback */
+    width: var(--lg-width);
+  }
+
+  .logo {
+    margin-left: 4px;
+  }
+}
+
+
+/* ------------- NAVIGATION ON SCROLL - HEIGHT CHANGE ------------- */
+
+.scroll-nav {
+  margin-top: 0;
+  height:60px;
+}
+
+header.scroll-nav {
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16);
+  transition: all 0.5s ease;
+}
+
+nav.scroll-nav .logo {
+  height: 40px;
+}
+
+
+/*------------- OVERLAY HEADER/ RESPONSIVE NAV  < 1024PX ------------- */
+
+header.overlay-open {
+  height: 100vh;
+  z-index: 10;
+  background: white;
+}
+
+header.overlay-close {
+  animation: closeOverlay 0.5s 5s ease;
+}
+
+@keyframes closeOverlay {
+  0% {
+    height: 100vh;
+  }
+
+  100% {
+    height: 90px;
+  }
+}
+
+/*fade in animation overlay open menu items */
+
+.overlay-open ul li {
+  opacity: 0;
+
+}
+
+.overlay-open li {
+  animation: fadeInMenu .5s ease forwards;
+  animation-delay: .25s;
+}
+.overlay-open li:nth-of-type(2) {
+  animation-delay: .35s;
+}
+.overlay-open li:nth-of-type(3) {
+  animation-delay: .5s;
+}
+
+.overlay-open li:nth-of-type(4) {
+  animation-delay: .65s;
+}
+
+ 
+@keyframes fadeInMenu {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes fadeOutMenu {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
+.overlay-close li {
+  animation: fadeOutMenu .5s ease forwards;
+  animation-delay: .25s;
+}
+
+/* ------------- NAV TOGGLE  HAMBURGER-------------*/
+
+
+.nav-toggle {
+  display: none;
+}
+
+#nav-burger {
+  position: absolute;
+  top: calc(50% - 7.5px); /*to center vertically on nav: half of the nav height - half of the nav-burger - hacky way :(;*/
+  width: 24px;
+  right: 0;  /*padding already on the nav */
+  transform: rotate(0deg);
+  transition: .5s ease-in-out;
+  cursor: pointer;
+  z-index: 100;  /*without z-index will not register click on open nav-toggle and no cursor pointer and */
+}
+#nav-burger span {
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: var(--dark-font-color);
+  opacity: 1;
+  left: 0; 
+  transform: rotate(0deg);
+  transition: .25s ease-in-out;
+}
+
+#nav-burger span:nth-child(1) {
+  top: 0px;
+}
+
+#nav-burger span:nth-child(2),
+#nav-burger span:nth-child(3) {
+  top: 7px; 
+}
+
+#nav-burger span:nth-child(4) {
+  top: 14px;
+}
+
+#nav-burger.open span:nth-child(1),
+#nav-burger.open span:nth-child(4){
+  top: 7px;
+  width: 0%;
+  left: 50%; 
+  cursor: pointer;
+}
+
+#nav-burger.open span:nth-child(2) {
+  transform: rotate(45deg);  
+  background-color: var(--accent-color);
+}
+
+#nav-burger.open span:nth-child(3) {
+  transform: rotate(-45deg);  
+  background-color: var(--accent-color);
+}
+
+
+  /*----------RESPONSIVE NAVIGATION------------*/
+
+
+@media (max-width:1024px) {
+  .nav-toggle {
+    display: inline-block;
+    z-index: 101;
+    position: absolute;
+    right: 0;
+    width: 42px;
+    height: 42px;
+  }
+
+  header, .nav {
+    height: 50px;
+    transition: all .7s ease;
+  }
+
+  .scroll-nav {
+    margin-top: 0;
+    height: 50px;
+  }
+
+  nav.scroll-nav .logo {
+    height: 30px;
+  }
+
+  .btn.hidden {
+    display: none;
+  }
+
+  ul.menu-items{
+    display: none;
+  } 
+
+  .nav ul li {
+    display: flex !important;
+    align-content: center;
+  }
+
+  .menu-items.open {
+    position: absolute;
+    top:0;
+    width:100%;
+    height:100vh;
+    padding: 10vh 0;
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transform: all 5s 5s ease-in-out;
+  }
+
+}
+
+
+ /* ==========================================================================
+     END NAVIGATION.CSS
+   ========================================================================== */
+
+
+
+
+
+
+
