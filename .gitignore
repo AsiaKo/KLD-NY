@@ -1,3 +1,9 @@
 
 *.config
 .DS_Store
+node_modules
+dist
+package.-lock.jason
+logs
+*.log
+src/css/vendor
