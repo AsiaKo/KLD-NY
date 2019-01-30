@@ -1,0 +1,44 @@
+{
+  "name": "kld",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-transform-arrow-functions": "^7.2.0",
+    "@babel/preset-env": "^7.3.1",
+    // "babel-core": "^6.26.3",
+    // "babel-preset-env": "^1.7.0",
+    "gulp": "^4.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-html-replace": "^1.6.2",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-rename": "^1.4.0",
+    "gulp-uglify": "^3.0.1"
+  },
+
+  "babel" : {
+    "presets" : [
+      "@babel/preset-env"
+    ]
+
+  },
+
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AsiaKo/KLD-NY.git"
+  },
+  "author": "Joanna K",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AsiaKo/KLD-NY/issues"
+  },
+  "homepage": "https://github.com/AsiaKo/KLD-NY#readme"
+}
