@@ -6,3 +6,4 @@ dist
 package.-lock.jason
 logs
 *.log
+src/css/vendor
