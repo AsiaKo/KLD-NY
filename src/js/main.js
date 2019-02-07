@@ -6,7 +6,6 @@
 
 console.log(" %cHopfully nothing to see here... constructive criticism welcome ", "color: gray; text-transform: uppercase");
 
-
 // Service Worker 
 if('serviceWorker'in navigator) {
   window.addEventListener('load', () =>{
