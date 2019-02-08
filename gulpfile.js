@@ -10,8 +10,7 @@ var pump = require('pump');
 
 
 
-
-
+//Replace script and styles paths in HTML files 
 gulp.task('replacePath', done => {
   gulp.src('src/*.html')
     .pipe(htmlreplace({
