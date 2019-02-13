@@ -89,7 +89,9 @@ span.lg-toggle-thumb  {
   cursor: url(../assets/cursor__link.png), pointer;
 
 }
-
+.lg-toolbar {
+  background-color: rgba(255, 255, 255, 1)!important;
+}
 
 .lg-outer .lg-thumb-item.active, .lg-outer .lg-thumb-item:hover {
     border-color:var(--accent-color) !important;

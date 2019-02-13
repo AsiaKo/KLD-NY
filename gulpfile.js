@@ -6,8 +6,16 @@ const rename = require('gulp-rename');
 const babel = require('gulp-babel');
 const htmlreplace = require('gulp-html-replace');
 const imagemin = require('gulp-imagemin');
-var pump = require('pump');
+const pump = require('pump');
 
+let copySrc = ['src/css/vendor/*',
+				'src/css/fonts/*', 
+				'src/assets/**/*', 
+				'src/manifest.json',
+				'src/sw.js',
+				'src/browserconfig.xml',
+				'src/.htaccess', 
+				'src/js/vendor/*'];
 
 
 //Replace script and styles paths in HTML files 
@@ -17,11 +25,9 @@ gulp.task('replacePath', done => {
         'css': 'css/main.min.css',
         'js': 'js/main.min.js'
     }))
-    .pipe(gulp.dest('dist/'));
-
-     done();
+    .pipe(gulp.dest('dist'));
+    done();
 });
-
 
 //CONCAT AND MINIFY CSS
 gulp.task('styles', done => {
@@ -32,10 +38,8 @@ gulp.task('styles', done => {
 	    suffix: '.min', 
 	  }))
 	  .pipe(gulp.dest('dist/css'));
-
 	  done();
 });
-
 
 // COMPILE and MINIFY JS MAIN
 gulp.task('scripts', () =>
@@ -58,58 +62,24 @@ gulp.task('images', done =>{
 });
 
 
-
-
 // COPY FILES and FOLDERS
 gulp.task('copy', done => {
-	gulp.src(
-		['src/css/img/*', 
-		'src/css/vendor/*',
-		'src/css/fonts/*', 
-		'src/assets/**/*', 
-		'src/404.html', 
-		'src/index.html', 
-		'src/gallery.html', 
-		'src/manifest.json',
-		'src/sw.js',
-		'src/browserconfig.xml',
-		'src/.htaccess', 
-		'src/js/vendor/*' ]
+	gulp.src( copySrc
 		,{base: 'src'})
 	.pipe(gulp.dest('dist'));
 
 	 done();
 });
 
-//REPLACE CSS AND JS FILE PATHS IN HTML 
 
-gulp.task('replacePath', done => {
-  gulp.src('src/*.html')
-    .pipe(htmlreplace({
-        'css': 'css/main.min.css',
-        'js': 'js/main.min.js'
-    }))
-    .pipe(gulp.dest('dist/'));
-     done();
-});
-
-gulp.task('default', gulp.series('styles','scripts','images', 'replacePath','copy')); 
+gulp.task('default', gulp.series('styles','scripts','images','copy', 'replacePath')); 
 
 gulp.task('watch', function(){
 	gulp.watch('src/js/*.js', gulp.series('scripts'));
 	gulp.watch('src/css/*.css', gulp.series('styles'));
 	gulp.watch('src/img/**/*', gulp.series('images'));
-	gulp.watch(['src/css/vendor/*',
-				'src/css/fonts/*', 
-				'src/assets/**/*', 
-				'src/404.html', 
-				'src/index.html', 
-				'src/gallery.html', 
-				'src/manifest.json',
-				'src/sw.js',
-				'src/browserconfig.xml',
-				'src/.htaccess', 
-				'src/js/vendor/*' ], gulp.series('copy'));
+	gulp.watch('src/*.html', gulp.series('replacePath'));
+	gulp.watch(copySrc, gulp.series('copy'));
 });
 
 

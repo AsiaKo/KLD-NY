@@ -317,21 +317,18 @@ div > img {
 
 <!-- lightgallery plugins -->
   <script type="text/javascript" async src="js/vendor/lg-fullscreen.js"></script>
-  <script type="text/javascript" async src="js/vendor/lg-autoplay.js"></script>
-
-    <script type="text/javascript" src="js/vendor/picturefill.min.js"></script>
+<!--   <script type="text/javascript" async src="js/vendor/lg-autoplay.js"></script>
+ -->
+  <script type="text/javascript" src="js/vendor/picturefill.min.js"></script>
   <!-- build:js -->
   <script type="text/javascript" async src="js/main.js"></script>
    <!-- endbuild -->
   <script >
-    $('#srcset').lightGallery({
-      thumbnail: false,
-      showThumbByDefault: false, 
-      getCaptionFromTitleOrAlt: false,
-      speed: 1000, 
-      easing: 'ease',
-    }); 
-  </script>
+ lightGallery(document.getElementById('srcset'), {
+      mode: 'lg-fade', 
+      // autoplay:true
+      })
+  </script> 
 
 </body>
 </html>

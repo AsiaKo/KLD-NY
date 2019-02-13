@@ -1,30 +1,9 @@
-/*! lg-autoplay - v1.0.4 - 2017-03-28
-* http://sachinchoolur.github.io/lightGallery
-* Copyright (c) 2017 Sachin N; Licensed GPLv3 */
-
-(function (root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD. Register as an anonymous module unless amdModuleId is set
-    define(['jquery'], function (a0) {
-      return (factory(a0));
-    });
-  } else if (typeof exports === 'object') {
-    // Node. Does not work with strict CommonJS, but
-    // only CommonJS-like environments that support module.exports,
-    // like Node.
-    module.exports = factory(require('jquery'));
-  } else {
-    factory(jQuery);
-  }
-}(this, function ($) {
-
-
 (function() {
 
     'use strict';
 
     var defaults = {
-        autoplay: false,
+        autoplay: true,
         pause: 5000,
         progressBar: true,
         fourceAutoplay: false,
@@ -201,6 +180,3 @@
     $.fn.lightGallery.modules.autoplay = Autoplay;
 
 })();
-
-
-}));
