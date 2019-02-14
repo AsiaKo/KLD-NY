@@ -1,87 +1,115 @@
-const gulp = require('gulp');
-const concat = require('gulp-concat');
-const cssmin = require('gulp-cssmin');
-const uglify = require('gulp-uglify');
-const rename = require('gulp-rename');
-const babel = require('gulp-babel');
-const htmlreplace = require('gulp-html-replace');
-const imagemin = require('gulp-imagemin');
-const pump = require('pump');
+const { src, dest, task, watch, series, parallel } = require('gulp');
 
-let copySrc = ['src/css/vendor/*',
-				'src/css/fonts/*', 
-				'src/assets/**/*', 
-				'src/manifest.json',
-				'src/sw.js',
-				'src/browserconfig.xml',
-				'src/.htaccess', 
-				'src/js/vendor/*'];
+const concat 		= require('gulp-concat');
+const cssmin 		= require('gulp-cssmin');
+const uglify 		= require('gulp-uglify');
+const babel 		= require('gulp-babel');
+const rename 		= require('gulp-rename');
+const replaceHtml	= require('gulp-html-replace');
+const imagemin 		= require('gulp-imagemin');
+const browserSync 	= require('browser-sync').create();
 
 
-//Replace script and styles paths in HTML files 
-gulp.task('replacePath', done => {
-  gulp.src('src/*.html')
-    .pipe(htmlreplace({
-        'css': 'css/main.min.css',
-        'js': 'js/main.min.js'
-    }))
-    .pipe(gulp.dest('dist'));
-    done();
-});
+// Project Source Variables 
 
-//CONCAT AND MINIFY CSS
-gulp.task('styles', done => {
-	gulp.src('src/css/*.css')
+let styleSrc 	= 'src/css/*.css';
+let jsSrc		= 'src/js/*.js';
+let htmlSrc		= 'src/*.html';
+let imgSrc 		= 'src/img/**/*'
+let copySrc  	= [ 'src/css/vendor/*',
+					'src/css/fonts/*', 
+					'src/assets/**/*', 
+					'src/manifest.json',
+					'src/sw.js',
+					'src/browserconfig.xml',
+					'src/.htaccess', 
+					'src/js/vendor/*'];
+
+
+function browser_sync(cb) {
+	browserSync.init({
+		server: {
+			baseDir: 'dist/'
+		}
+	});
+	cb();
+};
+
+function reload(cb) {
+	browserSyn.reload();
+	cb();
+};
+// Replace style and script path in dest HTML files
+function html(cb) {
+	src(htmlSrc)
+	.pipe(replaceHtml({
+	'css': 'css/main.min.css',
+	'js': 'js/main.min.js'
+	}))
+	.pipe(dest('dist'))
+	.pipe(browserSync.stream());
+	cb();
+};
+
+//Concat, minify  and rename css files
+function css(cb) {
+	src(styleSrc)
 	  .pipe(concat('main.css'))
 	  .pipe(cssmin())
 	  .pipe(rename({
 	    suffix: '.min', 
 	  }))
-	  .pipe(gulp.dest('dist/css'));
-	  done();
-});
+	  .pipe(dest('dist/css'))
+	  .pipe(browserSync.stream());
+	  cb();
+};
 
-// COMPILE and MINIFY JS MAIN
-gulp.task('scripts', () =>
-   gulp.src('src/js/*.js')
-      .pipe(babel({
-            presets: ['@babel/env']
-        }))
+
+// Compile, minify and rename js files 
+function js(cb){
+   src(jsSrc)
+      .pipe(babel({presets: ['@babel/env']}))
       .pipe(uglify())
-	  .pipe(rename({
-	    suffix: '.min'
-	  }))
-      .pipe(gulp.dest('dist/js/'))
-);
-//Optimize Images
-gulp.task('images', done =>{
-	gulp.src('src/img/**/*')
+	  .pipe(rename({suffix: '.min' }))
+      .pipe(dest('dist/js'))
+      .pipe(browserSync.stream());
+      cb();
+};
+
+//Optimize images
+function images() {
+	 return src(imgSrc)
 		.pipe(imagemin())
-		.pipe(gulp.dest('dist/img'));
-	  done();	
-});
+		.pipe(dest('dist/img'))
+		.pipe(browserSync.stream());
+};
 
 
-// COPY FILES and FOLDERS
-gulp.task('copy', done => {
-	gulp.src( copySrc
-		,{base: 'src'})
-	.pipe(gulp.dest('dist'));
-
-	 done();
-});
-
-
-gulp.task('default', gulp.series('styles','scripts','images','copy', 'replacePath')); 
-
-gulp.task('watch', function(){
-	gulp.watch('src/js/*.js', gulp.series('scripts'));
-	gulp.watch('src/css/*.css', gulp.series('styles'));
-	gulp.watch('src/img/**/*', gulp.series('images'));
-	gulp.watch('src/*.html', gulp.series('replacePath'));
-	gulp.watch(copySrc, gulp.series('copy'));
-});
+// Copy files and folders 
+function copy() {
+	return src(copySrc, {base:'src'})
+		.pipe(dest('dist'))
+		.pipe(browserSync.stream());
+	
+};
 
 
+function watch_files() {
+	watch(styleSrc, series(css, reload));
+	watch(jsSrc, series(js, reload));
+	watch(imgSrc, series(images, reload));
+	watch(htmlSrc, series(html, reload));
+	watch(copySrc, series(copy, reload));
+}
+
+task('html', html);
+task('css', css);
+task('js', js);
+task('copy', copy);
+task('images', images);
+
+
+task('default', parallel(html, css, js, images, copy)); 
+task('watch', parallel(browser_sync, watch_files));
 
 
