@@ -1,10 +1,8 @@
  /* ==========================================================================
      FOOTER.CSS
    ========================================================================== */
-
-
 footer {
-  background: white;
+  background: var(--body-background-color);
   display: flex;   
   align-items: center;
   position: fixed;
@@ -15,13 +13,10 @@ footer {
   width: var(--sm-width, 98%);
   max-width: 1920px;
   height: 70px;
-÷
   transition: 0.5s;
-  /* z-index: -1;*/
   text-align:center;  
-    border-top: 2px solid #eee;
+  border-top: 2px solid #eee;
 }
-
 
 .copy {
   position: absolute;
@@ -60,11 +55,9 @@ footer {
 
 @media screen and (min-width:1024px) {
   footer {
-
-    width: var(--lg-width, 95%);
+   width: var(--lg-width);
   }
 
-    
 }
 
  /* ==========================================================================

@@ -9,6 +9,8 @@ const replaceHtml	= require('gulp-html-replace');
 const imagemin 		= require('gulp-imagemin');
 const browserSync 	= require('browser-sync').create();
 
+const ghpages 		= require('gulp-gh-pages');
+
 
 // Project Source Variables 
 
@@ -18,13 +20,13 @@ let htmlSrc		= 'src/*.html';
 let imgSrc 		= 'src/img/**/*'
 let copySrc  	= [ 'src/css/vendor/*',
 					'src/css/fonts/*', 
+					'src/css/img/*', 
 					'src/assets/**/*', 
 					'src/manifest.json',
 					'src/sw.js',
 					'src/browserconfig.xml',
 					'src/.htaccess', 
 					'src/js/vendor/*'];
-
 
 function browser_sync(cb) {
 	browserSync.init({
@@ -36,7 +38,7 @@ function browser_sync(cb) {
 };
 
 function reload(cb) {
-	browserSyn.reload();
+	browserSync.reload();
 	cb();
 };
 // Replace style and script path in dest HTML files
@@ -63,7 +65,6 @@ function css(cb) {
 	  .pipe(browserSync.stream());
 	  cb();
 };
-
 
 // Compile, minify and rename js files 
 function js(cb){
@@ -93,7 +94,6 @@ function copy() {
 	
 };
 
-
 function watch_files() {
 	watch(styleSrc, series(css, reload));
 	watch(jsSrc, series(js, reload));
@@ -102,12 +102,20 @@ function watch_files() {
 	watch(copySrc, series(copy, reload));
 }
 
+function deploy(cb) {
+   return src('dist')
+        .pipe(ghpages());
+        cb();
+
+};
+
+
 task('html', html);
 task('css', css);
 task('js', js);
 task('copy', copy);
 task('images', images);
-
+task('deploy', deploy);
 
 task('default', parallel(html, css, js, images, copy)); 
 task('watch', parallel(browser_sync, watch_files));
