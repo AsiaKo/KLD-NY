@@ -83,7 +83,7 @@ h1 {
 
 p, address{   
   font-size:  var(--body-font-size);           
-  letter-spacing: 1.6px;
+  letter-spacing: 1.5px;
 }
 
 .nav ul a.a-link, .btn{
