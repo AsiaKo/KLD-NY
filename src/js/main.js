@@ -52,7 +52,7 @@ $(document).ready(function(){
   $("#nav-burger").on("click", function(e) {
       e.preventDefault();
     $("header").toggleClass("overlay-open");
-    $(".menu-items").toggleClass("open");
+    $(".menu-items, #nav-burger").toggleClass("open");
 
   });
 
@@ -171,10 +171,7 @@ function initMap() {
         var marker = new google.maps.Marker({
             position: kldny,
             map: map,
-            title:"KLD NY", 
-            icon: image,
-           
+            title:"KLD NY",            
          });
     }
 
-//

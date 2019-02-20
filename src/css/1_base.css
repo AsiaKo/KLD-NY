@@ -44,7 +44,7 @@ html, body {
   overflow-x: hidden; /*REMOVES HORIZONTAL SCROLLBAR THE ABOVE CREATES*/
   margin-top: 0px; /*COMPENSATES THE HORIZONTAL SCROLLBAR*/
   background: #fff;
-  margin-left: calc(100vw - 100%); /*fix for jumping content does not work :(*/
+  /*margin-left: calc(100vw - 100%); fix for jumping content does not work :(*/
   cursor:url("../assets/cursor__body.png"), auto;
 }
 
