@@ -102,8 +102,12 @@ function watch_files() {
 	watch(copySrc, series(copy, reload));
 }
 
+/**
+ * Push build to gh-pages
+ */
+
 function deploy(cb) {
-   return src('dist')
+   return src('./dist/**/*')
         .pipe(ghpages());
         cb();
 
