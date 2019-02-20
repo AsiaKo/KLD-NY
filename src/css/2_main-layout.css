@@ -257,6 +257,18 @@ ul.contact-items {
 
 }
 
+/*LAZY IMAGES */
+
+img.lazy-image {
+    opacity: 0.1;
+    will-change: opacity;
+    transition: all 0.3s;
+  }
+
+img.lazy-image.loaded {
+    opacity: 1;
+  }
+
 
 /* ==========================================================================
     END MAIN-LAYOUT.CSS

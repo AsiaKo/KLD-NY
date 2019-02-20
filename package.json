@@ -1,4 +1,10 @@
 {
+<<<<<<< HEAD
+  "name": "kld-ny",
+  "version": "1.0.0",
+  "description": "",
+  "main": "sw.js",
+=======
   "name": "kld",
   "version": "1.0.0",
   "description": "",
@@ -23,6 +29,7 @@
     "gulp-rename": "^1.4.0",
     "gulp-uglify": "^3.0.1"
   },
+>>>>>>> e5f014668b1d897ba1d391d3b4e6ac262c52d441
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -30,10 +37,30 @@
     "type": "git",
     "url": "git+https://github.com/AsiaKo/KLD-NY.git"
   },
+<<<<<<< HEAD
+  "author": "",
+=======
   "author": "Joanna K",
+>>>>>>> e5f014668b1d897ba1d391d3b4e6ac262c52d441
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/AsiaKo/KLD-NY/issues"
   },
+<<<<<<< HEAD
+  "homepage": "https://github.com/AsiaKo/KLD-NY#readme",
+  "devDependencies": {
+    "autoprefixer": "^9.3.1",
+    "cssnano": "^4.1.7",
+    "gulp": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-postcss": "^8.0.0",
+    "gulp-uglify": "^3.0.1",
+    "gulp-uglify-es": "^1.0.4",
+    "gulp-useref": "^3.1.6"
+  }
+=======
   "homepage": "https://github.com/AsiaKo/KLD-NY#readme"
+>>>>>>> e5f014668b1d897ba1d391d3b4e6ac262c52d441
 }

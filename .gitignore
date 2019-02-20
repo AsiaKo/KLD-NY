@@ -2,7 +2,8 @@
 *.config
 .DS_Store
 node_modules
-package.-lock.jason
+package-lock.jason
 logs
 *.log
-# dist
+node_modules/
+dist

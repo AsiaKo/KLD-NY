@@ -40,6 +40,14 @@
 	<link rel="apple-touch-startup-image" href="img/splash/apple_splash_1536.png" media="(min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
 	<link rel="apple-touch-startup-image" href="img/splash/apple_splash_1668.png" media="(min-device-width: 834px) and (max-device-width: 834px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
 	<link rel="apple-touch-startup-image" href="img/splash/apple_splash_2048.png" media="(min-device-width: 1024px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
+
+	<head>
+  <script>
+    // Picture element HTML5 shiv
+    document.createElement( "picture" );
+  </script>
+  <script src="js/vendor/picturefill.min.js" async></script>
+</head>
 </head>
 <body >	
 
@@ -94,10 +102,10 @@
 							<p>We are licensed, bonded and fully insured.</p>
 						</div>
 
-						<div class="col col-2" data-src="img/115CPW/sm-05.jpg"  data-srcset="img/115CPW/sm-05.jpg 300w, img/115CPW/md-05.jpg 490w, img/115CPW/lg-05.jpg 700w">
-						
-							<img class="rellax" src="img/115CPW/sm-05.jpg"  alt="kitchen with white cabinetry">
-						</div> 
+						 <picture class="col col-2"> 
+							<img class="rellax" src="img/115CPW/lg-05.jpg" 
+							srcset="img/115CPW/sm-05.jpg 300w, img/115CPW/md-05.jpg 490w, img/115CPW/lg-05.jpg" alt="kitchen with white cabinetry">
+						</picture> 
 					</section>
 
 					<section id="services" class="services">
