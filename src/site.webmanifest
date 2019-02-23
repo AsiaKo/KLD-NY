@@ -1,0 +1,59 @@
+{
+  "name": "KLD NY",
+  "short_name": "KLD",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color":"#FFFFFF",
+  "description": "High End General Contracting Services",
+  "icons": [{
+    "src": "img/favicon/favicon-16x16.png",
+    "sizes": "16x16",
+    "type": "image/png"
+  }, {
+    "src": "img/favicon/favicon-32x32.png",
+    "sizes": "32x32",
+    "type": "image/png"
+  }, {
+    "src": "img/favicon/favicon-96x96.png",
+    "sizes": "96x96",
+    "type": "image/png"
+  }, {
+    "src": "img/favicon/favicon-196x196.png",
+    "sizes": "196x196",
+    "type": "image/png"
+  }, {
+    "src": "img/favicon/favicon-512x512.png",
+    "sizes": "512x512",
+    "type": "image/png"
+  }, {
+    "src": "img/favicon/apple-touch-icon-144x144.png",
+    "sizes": "144x144",
+    "type": "image/png"
+  }, {
+    "src": "img/favicon/apple-touch-icon-152x152.png",
+    "sizes": "152x152",
+    "type": "image/png"
+  }, {
+    "src": "img/favicon/apple-touch-icon-512x512.png",
+    "sizes": "512x512",
+    "type": "image/png"
+  }, {
+    "src": "img/favicon/mstile-70x70.png",
+    "sizes": "70x70",
+    "type": "image/png"
+  }, {
+    "src": "img/favicon/mstile-144x144.png",
+    "sizes": "144x144",
+    "type": "image/png"
+  }, {
+    "src": "img/favicon/mstile-310x150.png",
+    "sizes": "310x150",
+    "type": "image/png"
+  }, {
+    "src": "img/favicon/mstile-310x310.png",
+    "sizes": "310x310",
+    "type": "image/png"
+  }
+]
+}
