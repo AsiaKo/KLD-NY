@@ -52,7 +52,7 @@ $(document).ready(function(){
   $("#nav-burger").on("click", function(e) {
       e.preventDefault();
     $("header").toggleClass("overlay-open");
-    $(".menu-items").toggleClass("open");
+    $(".menu-items, #nav-burger").toggleClass("open");
 
   });
 
