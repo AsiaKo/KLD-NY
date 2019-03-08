@@ -1,4 +1,3 @@
-
  /* ==========================================================================
      NAVIGATION.CSS
    ========================================================================== */
@@ -16,6 +15,7 @@ header {
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.0);
   transition: all 0.5s ease;
   z-index: 100;
+
 }
 
 header:after, header:before {
@@ -70,8 +70,8 @@ header:after, header:before {
     width: var(--lg-width);
   }
 
- /* .logo {
-    margin-left: 4px;*/
+  .logo {
+    margin-left: 4px;
   }
 }
 
@@ -119,6 +119,7 @@ header.overlay-close {
 
 .overlay-open ul li {
   opacity: 0;
+
 }
 
 .overlay-open li {
@@ -282,10 +283,3 @@ header.overlay-close {
  /* ==========================================================================
      END NAVIGATION.CSS
    ========================================================================== */
-
-
-
-
-
-
-

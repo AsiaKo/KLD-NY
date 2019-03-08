@@ -1,10 +1,10 @@
-
 /* ==========================================================================
   MAIN.JS
    ========================================================================== */
 "use strict";
 
 console.log(" %cHopfully nothing to see here... constructive criticism welcome ", "color: gray; text-transform: uppercase");
+
 
 // Service Worker 
 if('serviceWorker'in navigator) {
@@ -15,6 +15,7 @@ if('serviceWorker'in navigator) {
       .catch(err => console.log(`Service Worker: Error: ${err}`))
   })
 }
+
 
 $(document).ready(function(){
 
@@ -47,9 +48,9 @@ $(document).ready(function(){
 }).scroll();
 
 
-	// BURGER MENU/ OVERLAY NAV OPEN
+  // BURGER MENU/ OVERLAY NAV OPEN
 
-  $("#nav-burger").on("click", function(e) {
+  $(".nav-toggle").on("click", function(e) {
       e.preventDefault();
     $("header").toggleClass("overlay-open");
     $(".menu-items, #nav-burger").toggleClass("open");
@@ -171,7 +172,9 @@ function initMap() {
         var marker = new google.maps.Marker({
             position: kldny,
             map: map,
-            title:"KLD NY",            
+            title:"KLD NY", 
+            icon: image,
+           
          });
     }
 
