@@ -6,4 +6,5 @@ package-lock.jason
 logs
 *.log
 node_modules/
+.publish
 dist
