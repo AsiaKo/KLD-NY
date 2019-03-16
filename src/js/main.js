@@ -67,8 +67,6 @@ $(document).ready(function(){
           }, 800);
   });
 
-// -------- END ANIMATIONS ON SCROLL -------------
-
   $(window).on("scroll", function() {
 
   //  CHANGE NAV HEIGHT AND ADD BOX-SHADOW ON SCROLL
@@ -81,8 +79,6 @@ $(document).ready(function(){
           });
 
 // ANIMATION FADE IN ON SCROLL
-
-
 //Cache reference to window and animation items
 var $animation_elements = $(".animate, .portfolio-item");
 var $window = $(window);
@@ -110,7 +106,8 @@ function check_if_in_view() {
   });
 }
  
-  // -------- SCROLL DOWN -------------  
+  // --------LINE SCROLL DOWN -------------  
+
     $(window).scroll(function(){
             if ($(this).scrollTop() > 200) {
                 $(".line-scroll").fadeOut(400);
@@ -118,6 +115,7 @@ function check_if_in_view() {
         });
 
   // -------- BACK TO TOP -------------  
+
      $(window).scroll(function(){
             if ($(this).scrollTop() > 600) {
                 $(".line-top").css({"opacity": "1", "transform": "translate3d(0,0,0)"});     
@@ -128,7 +126,8 @@ function check_if_in_view() {
        
     });
 
- //Click event to scroll to top
+
+  // -------- SCROLL TO TOP ------------  
 
     $(".line-top").click(function(){
         $("html, body").animate({scrollTop : 0},700);
@@ -144,7 +143,7 @@ let date = new Date().getFullYear();
 document.querySelector(".year").textContent = date;
 
 
-  // ------- CUSTOM GOOGLE MAP-------------  
+  //------- CUSTOM GOOGLE MAP-------------  
 
 function initMap() {
 
@@ -177,4 +176,108 @@ function initMap() {
            
          });
     }
+
+  // ------- LAZY LOADING - INTERSECTION OBSERVER ------------- 
+
+
+  const images = document.querySelectorAll('[data-srcset]');
+const config = {
+  // if the image gets within 50px in the Y axis, start the download.
+  rootMargin: '0px 0px',
+  threshold: 0.01
+};
+
+if (!('IntersectionObserver' in window)) {
+  // no support for intersection observer, load the images immediately
+  Array.from(images).forEach(image => loadImage(image));
+} else {
+
+  // observer for the images on the page
+  var observer = new IntersectionObserver(onIntersection, config);
+  images.forEach(image => {
+    observer.observe(image);
+      
+  });
+}
+
+function onIntersection(entries) {
+  
+  // loop through the entries
+  entries.forEach(entry => {
+    
+    // are we in viewport?
+    if (entry.intersectionRatio > 0) {
+      console.log('loaded');
+
+      // stop watching
+      observer.unobserve(entry.target);
+      
+      // load image
+      loadImage(entry.target);
+    }
+  });
+}
+
+function loadImage(e) {
+  e.src = e.dataset.src;
+  e.srcset = e.dataset.srcset;
+  e.classList.add('fade-up');
+}
+
+//   document.addEventListener("DOMContentLoaded", function() {
+//   var lazyloadImages;    
+
+//   if ("IntersectionObserver" in window) {
+//     lazyloadImages = document.querySelectorAll("[data-src],[data-srcset]");
+//     var imageObserver = new IntersectionObserver(function(entries, observer) {
+//       entries.forEach(function(entry) {
+//         if (entry.isIntersecting) {
+//           var image = entry.target;
+//           image.src = image.dataset.src;
+//           image.srcset = image.
+//           image.classList.add(".fade-up");
+//           image.classList.remove("lazy");
+//           imageObserver.unobserve(image);
+//         }
+//       });
+//     });
+
+//     lazyloadImages.forEach(function(image) {
+//       imageObserver.observe(image);
+//     });
+//   } else {  
+//     var lazyloadThrottleTimeout;
+//     lazyloadImages = document.querySelectorAll("[data-src],[data-srcset]");
+    
+//     function lazyload () {
+//       if(lazyloadThrottleTimeout) {
+//         clearTimeout(lazyloadThrottleTimeout);
+//       }    
+
+//       lazyloadThrottleTimeout = setTimeout(function() {
+//         var scrollTop = window.pageYOffset;
+//         lazyloadImages.forEach(function(img) {
+//             if(img.offsetTop < (window.innerHeight + scrollTop)) {
+//               img.src = img.dataset.src;
+//               img.srcset = img.dataset.srcset;
+//               img.classList.add(".fade-up");
+//               img.classList.remove('lazy');
+//             }
+//         });
+//         if(lazyloadImages.length == 0) { 
+//           document.removeEventListener("scroll", lazyload);
+//           window.removeEventListener("resize", lazyload);
+//           window.removeEventListener("orientationChange", lazyload);
+//         }
+//       }, 20);
+//     }
+
+//     document.addEventListener("scroll", lazyload);
+//     window.addEventListener("resize", lazyload);
+//     window.addEventListener("orientationChange", lazyload);
+//   }
+// })
+
+
+
 

@@ -66,13 +66,13 @@ header:after, header:before {
 
 @media screen and (min-width: 1024px) {
   .nav {
-    width: 95%;  /*fallback */
+    width: 95%; 
     width: var(--lg-width);
   }
 
-  .logo {
+/*  .logo {
     margin-left: 4px;
-  }
+  }*/
 }
 
 
@@ -93,7 +93,7 @@ nav.scroll-nav .logo {
 }
 
 
-/*------------- OVERLAY HEADER/ RESPONSIVE NAV  < 1024PX ------------- */
+/* ------------- OVERLAY HEADER/ RESPONSIVE NAV  < 1024PX ------------- */
 
 header.overlay-open {
   height: 100vh;
@@ -224,7 +224,7 @@ header.overlay-close {
 }
 
 
-  /*----------RESPONSIVE NAVIGATION------------*/
+/* ----------RESPONSIVE NAVIGATION------------ */
 
 
 @media (max-width:1024px) {

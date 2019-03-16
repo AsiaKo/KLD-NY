@@ -102,10 +102,22 @@
 							<p>We are licensed, bonded and fully insured.</p>
 						</div>
 
-						<picture class="col col-2"> 
-							<img class="rellax" src="img/115CPW/lg-05.jpg" 
-							srcset="img/115CPW/sm-05.jpg 300w, img/115CPW/md-05.jpg 490w, img/115CPW/lg-05.jpg" alt="kitchen with white cabinetry">
+						<picture class="col col-2 animate lazy"> 
+							<source type="image/webp" 
+							data-srcset="img/275W10/1.webp 1x,
+							img/275W10/1@2x.webp 2x, 
+							img/275W10/1@3x.webp 3x">
+    						<source
+    						data-srcset="
+							img/275W10/1@3x.jpg 960w,
+							img/275W10/1@2x.jpg 608w
+							img/275W10/1.jpg 320w,
+							">
+							<img class="rellax lazy" 
+							data-src="img/275W10/1.jpg"
+							alt="Living Room and Kitchen">
 						</picture> 
+
 					</section>
 
 					<section id="services" class="services">
@@ -118,10 +130,22 @@
 							<a class="btn btn-wipe" href="gallery.html" data-wipe="View Gallery">View Gallery</a>
 
 						</div>
-						<div class="col col-2 " data-src="img/115CPW/sm-06.jpg" data-srcset="img/115CPW/sm-06.jpg 600w, img/115CPW/md-06.jpg 800w, img/115CPW/lg-06.jpg 1080w">
-							<img class="rellax img" data-relax-speed="-3" src="img/115CPW/sm-06.jpg"  alt="bedroom">
-						</div>
-				</section>
+
+						<picture class="col col-2 animate lazy"> 
+							<source type="image/webp" 
+							data-srcset="img/115CPW/1.webp 1x,
+							img/115CPW/1@2x.webp 2x, 
+							img/115CPW/1@3x.webp 3x">
+    						<source  
+    						data-srcset="img/115CPW/1.jpg 320w,
+							img/115CPW/1@2x.jpg 608w, 
+							img/115CPW/1@3x.jpg 960w
+							">						
+							<img class="rellax lazy" 
+							data-src="img/115CPW/1.jpg"
+							alt="kitchen with white cabinetry">
+						</picture> 						
+					</section>
 
 				<section id="testimonials" class="testimonials">			
 					<div class="col col-1 animate">
@@ -245,7 +269,7 @@
 	<footer class="footer">
 	<div class="copy">© KLD NY <span class="year"></span></div>
 
-		<p class="credits">website by <a data-email="joannasiakozik@gmail.com" href="mailto:joannasiakozik@gmail.com?subject=Hello" > asiako<span class="red-element">.</span> </a></p>
+		<p class="credits">website by <a href="https://joannakozik.com/" > joanna<span class="red-element">.</span> </a></p>
 
 		<ul class="social-items">
 			<li>
@@ -309,7 +333,7 @@
 	  });
 	</script>
 
-	<script  type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB6VXCVtjWl8I7ZnqLSHxIWOaFqEMVskmc&callback=initMap">
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB6VXCVtjWl8I7ZnqLSHxIWOaFqEMVskmc&callback=initMap">
     </script>
 
 </body>
