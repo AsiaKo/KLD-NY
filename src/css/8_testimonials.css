@@ -4,7 +4,7 @@
    ========================================================================== */
 
 .testimonials > .col-2 {
-
+height:auto;
    justify-content: center;
 }
 
@@ -12,12 +12,10 @@
 @media screen and (min-width: 415px) {
 
   .testimonials > .col-2 {
-  margin-top: auto;
+     margin-top: auto;
   }
-
     .testimonials > .col-2 {
-
-   justify-content: flex-end;
+      justify-content: flex-end;
  }
   
 }
@@ -52,7 +50,7 @@
 
 .testimonial {
   align-items: center;
-  background: #fff;
+  /*background: #fff;*/
   border-radius: 4px;
   display: flex;
   margin-bottom: 2.5em;
@@ -99,15 +97,21 @@
 
 
 /*-----------LIGHTSLIDER CUSTOM COLORS -------------*/
-
+.lSSlideOuter .lSPager.lSpg {
+    margin-top: -10px !important;
+}
 
 .lSSlideOuter .lSPager.lSpg > li a {
   background-color: var(--light-font-color) !important;
-      cursor: url(../assets/cursor__link.png), auto;
+  cursor: url(../assets/cursor__link.png), auto;
+  height:10px !important;
+  width: 10px !important;
 }
 .lSSlideOuter .lSPager.lSpg > li:hover a, .lSSlideOuter .lSPager.lSpg > li.active a {
   background-color: var(--accent-color) !important;
   cursor: url(../assets/cursor__link.png), auto;
+  height:10px !important;
+  width: 10px !important;
 }
 
  /* ==========================================================================
