@@ -106,6 +106,18 @@ section {
   object-fit: cover;
 }
 
+.img-caption {
+    position: absolute;
+    bottom: 0px;
+    background: rgba(255, 255, 255, .2);
+    padding: 5px;
+    font-size: var(--sm-font-size);
+}
+
+.img-caption .icon {
+    padding: 5px;
+}
+
 .contact, .error {
   margin-top: 50px;
   padding-top: 0;
