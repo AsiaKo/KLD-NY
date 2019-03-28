@@ -180,7 +180,7 @@ function initMap() {
   // ------- LAZY LOADING - INTERSECTION OBSERVER ------------- 
 
 
-  const images = document.querySelectorAll('[data-srcset]');
+  const images = document.querySelectorAll('[data-srcset],[data-src]');
 const config = {
   // if the image gets within 50px in the Y axis, start the download.
   rootMargin: '0px 0px',
@@ -207,7 +207,6 @@ function onIntersection(entries) {
     
     // are we in viewport?
     if (entry.intersectionRatio > 0) {
-      console.log('loaded');
 
       // stop watching
       observer.unobserve(entry.target);

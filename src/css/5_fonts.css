@@ -47,7 +47,7 @@
 /*FONT SIZES*/
 --header-font-size: calc(46px + .2vmin);
 --body-font-size: calc(16px + .15vmin);
---sm-font-size:calc(11px + .15vmax);
+--sm-font-size:calc(12px + .10vmax);
 --xs-font-size:8px;
 }
 

@@ -2,7 +2,7 @@
 *.config
 .DS_Store
 node_modules
-package-lock.jason
+package-lock.json
 logs
 *.log
 node_modules/
