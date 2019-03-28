@@ -1,4 +1,5 @@
-const cacheName = 'v2.0';
+// new project (275W10) added to version 2.0
+const cacheName = 'v2.1';
 
 
 
