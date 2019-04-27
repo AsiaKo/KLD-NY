@@ -180,7 +180,7 @@ function initMap() {
   // ------- LAZY LOADING - INTERSECTION OBSERVER ------------- 
 
 
-  const images = document.querySelectorAll('[data-srcset],[data-src]');
+  const images = document.querySelectorAll('[data-srcset]');
 const config = {
   // if the image gets within 50px in the Y axis, start the download.
   rootMargin: '0px 0px',
@@ -218,10 +218,27 @@ function onIntersection(entries) {
 }
 
 function loadImage(e) {
-  e.src = e.dataset.src;
   e.srcset = e.dataset.srcset;
   e.classList.add('fade-up');
 }
+
+
+// CONTACT LINKS 
+
+function clickToEmail() {
+      window.location.href = 'mailto:kathy@kldny.com';
+    }
+
+    function clickToSms() {     
+      window.location.href = 'sms:646-725-1966';
+    }
+
+    function clickToCall() {    
+      window.location.href = 'tel:646-725-1966';
+    }
+
+
+    //LAZY LOADING - update when Safari IntersectionObserver
 
 //   document.addEventListener("DOMContentLoaded", function() {
 //   var lazyloadImages;    
