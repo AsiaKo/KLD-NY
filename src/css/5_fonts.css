@@ -46,6 +46,8 @@
 
 /*FONT SIZES*/
 --header-font-size: calc(46px + .2vmin);
+--subheader-font-size: calc(38px + .2vmin);
+--h3-font-size: calc(16px + .3vmin);
 --body-font-size: calc(16px + .15vmin);
 --sm-font-size:calc(12px + .10vmax);
 --xs-font-size:8px;
@@ -66,12 +68,30 @@ font-family: var(--body-font-family);
   }
 }
 
+@media (min-width: 1024px) {
+  :root {
+    --subheader-font-size: calc(36px + .2vmin);
+  }
+}
+
+
 
 h1 {
   color: var(--dark-font-color);
   font-weight:700;
   letter-spacing: 1.2px;
   font-size: var(--header-font-size);
+}
+
+
+h2 {
+  font-size: var(--subheader-font-size);
+  color: var(--dark-font-color);
+}
+
+
+h3 {
+font-size: var(--h3-font-size);
 }
 
 .home  .col-1 h1 {
@@ -84,6 +104,7 @@ h1 {
 p, address{   
   font-size:  var(--body-font-size);           
   letter-spacing: 1.5px;
+  line-height: calc(var(--body-font-size) * 1.4);
 }
 
 .nav ul a.a-link, .btn{

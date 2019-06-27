@@ -24,9 +24,8 @@ $(document).ready(function(){
     scrollLink.click(function(e) {
     if (this.hash !== ""){
         e.preventDefault();
-
          var target = this.hash;
-         var targetOffset = $(target).offset().top - 50;
+         var targetOffset = $(target).offset().top - 70;
 
         $("body,html").animate({
           scrollTop: targetOffset
@@ -39,10 +38,11 @@ $(document).ready(function(){
     $(window).scroll(function() {
     var scrollDistance = $(window).scrollTop();
     // Assign active class to nav links while scrolling
-    $('section').each(function(i) {
+    $('.section').each(function(i) {
         if ($(this).position().top <= scrollDistance) {
-            $('.nav .active-link').removeClass('active-link');
-            $('.nav a').eq(i).addClass('active-link');
+            // $('.nav .active-link').removeClass('active-link');
+            // $('.nav a').eq(i).addClass('active-link');
+            // console.log('active');
         }
     });
 }).scroll();
@@ -226,7 +226,7 @@ function loadImage(e) {
 // CONTACT LINKS 
 
 function clickToEmail() {
-      window.location.href = 'mailto:kathy@kldny.com';
+      window.location.href = 'mailto:office@kldny.com?subject=Project Inquiry from Website';
     }
 
     function clickToSms() {     

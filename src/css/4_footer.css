@@ -35,6 +35,7 @@ footer {
   font-style: italic;    
   font-size: var(--sm-font-size);
   cursor: pointer;
+  margin-left: 14px;
 }
 
 .icon {
