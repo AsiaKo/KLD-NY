@@ -123,6 +123,69 @@ a.a-link,  .btn{
 
 }
 
+
+.btn-text, .btn-text:link, .btn-text:visited {
+  font-size: var(--root-font-size);
+  color: var(--accent-color, red);
+  text-decoration: none;
+  display: inline-block;
+  border-bottom: 1.5px solid var(--accent-color, red);
+  padding: 2px;
+  transition: all .2s;
+  position: relative;
+  max-width: max-content;
+  text-transform: uppercase;
+}
+
+.btn-next:after {
+  content: "\2192";
+  position: relative;
+  -webkit-transition: all .2s ease-in-out;
+  margin-left: 10px;
+  display: inline-block;
+}
+
+
+.btn-previous:before{
+  content: "\2190";
+  position: relative;
+  -webkit-transition: all .2s ease-in-out;
+  /*margin-right: 10px;*/
+  display: inline-block;
+
+}
+/*
+.btn-text:after {
+  content: "\2192";
+  position: relative;
+}*/
+
+.btn-text:hover {
+  color:var(--accent-color, red);
+  border-bottom: 1.5px solid var(--accent-color, red);
+}
+
+/*.btn-text:after {
+  content: "\2192";
+  -webkit-transition: all .2s ease-in-out;
+  margin-left: 10px;
+  display: inline-block;
+}*/
+.btn-text:active {
+  color:var(--accent-color, red);
+}
+
+.btn-next:hover:after {
+  transform : translateX(20px);
+}
+
+.btn-previous:hover:before {
+  transform : translateX(-20px);
+
+.btn-white {
+  color: #fff;
+}
+
  
 
 

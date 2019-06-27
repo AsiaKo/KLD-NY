@@ -1,0 +1,38 @@
+ /* ==========================================================================
+   11_project.css
+   ========================================================================== */
+
+.portfolio {
+   grid-auto-flow: dense;
+}
+
+.btn-previous  {
+align-self: center;
+/*margin-left: auto;*/
+}
+
+section.project p {
+	display: inline-block;
+	margin-left: 30px;
+}
+
+
+   section.project {
+/*      padding-top: 50px;*/
+   	height: auto;
+   	flex-direction: column;
+   }
+
+
+   @media (min-width: 1023px) {
+   	   section .project  {
+   	   	flex-direction: column;
+   	   }
+   }
+
+   @media screen and (min-width: 1024px) {
+       section.project {
+      padding-top: 80px;
+      }
+
+   }
