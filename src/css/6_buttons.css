@@ -128,7 +128,8 @@ a.a-link,  .btn{
   font-size: var(--root-font-size);
   color: var(--accent-color, red);
   text-decoration: none;
-  display: inline-block;
+ /* display: inline-block;*/
+  display: table-cell; /*Restrict border width to text width in a block element in Edge*/
   border-bottom: 1.5px solid var(--accent-color, red);
   padding: 2px;
   transition: all .2s;
@@ -145,32 +146,19 @@ a.a-link,  .btn{
   display: inline-block;
 }
 
-
 .btn-previous:before{
   content: "\2190";
   position: relative;
   -webkit-transition: all .2s ease-in-out;
-  /*margin-right: 10px;*/
   display: inline-block;
-
 }
-/*
-.btn-text:after {
-  content: "\2192";
-  position: relative;
-}*/
+
 
 .btn-text:hover {
   color:var(--accent-color, red);
   border-bottom: 1.5px solid var(--accent-color, red);
 }
 
-/*.btn-text:after {
-  content: "\2192";
-  -webkit-transition: all .2s ease-in-out;
-  margin-left: 10px;
-  display: inline-block;
-}*/
 .btn-text:active {
   color:var(--accent-color, red);
 }
@@ -181,12 +169,10 @@ a.a-link,  .btn{
 
 .btn-previous:hover:before {
   transform : translateX(-20px);
-
-.btn-white {
-  color: #fff;
 }
 
- 
+ .btn-white {
+  color: #fff;
 
 
  /* ==========================================================================
