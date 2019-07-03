@@ -1,4 +1,4 @@
-
+  
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,94 +27,22 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#FFFFFF">
 
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127455810-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-139331087-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-    gtag('config', 'UA-127455810-1');
-  </script>
+  gtag('config', 'UA-139331087-1');
+</script>
+
+<meta name="google-site-verification" content="W7H1DNi1iBQAGO9kYH82mVfqFMvMAfSX97Rc0Qtrz-A" />
 
 </head>
 <body>
   <style>
-  .portfolio {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  align-content: flex-start;
-  justify-content: space-around;
-  margin-top: 60px;
-}
-
-.portfolio-item {
-  opacity:0;
-  position: relative;
-  overflow: hidden;
-  flex-grow: 1;
-  width: 94vw;
-  height: 94vw;
-  margin:3vw auto 4vw auto; 
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  border-collapse: separate;  
-  cursor:url("assets/plus.png"), auto; 
-  /*hover effect*/
-  background-color: #000;
-}
-
-.portfolio-item img {
-  object-fit: cover;
-  width: calc(100% + 30px);  /*hover effect / length added to offset tx in translate3D */
-  height: 100%;
-  /*hover effect*/
-  transition: opacity 0.35s, transform 0.35s;
-  opacity: 1;
-  transform: translate3d(-30px,0,0) scale(1.12);   
-}
-
-
-.portfolio-item img:hover {
-  transform: translate3d(0,0,0) scale(1);
-  filter: grayscale(100%);
-  opacity: 0.3;
-}
-
-@media only screen and (max-width: 1024px) and (min-width: 500px)  {
   
-  .portfolio-item  {
-    width: 25vw;
-    height: 25vw;
-    margin: 1vw;
-  }
-  
-}
-
-@media (min-width:1025px) {
-  
-  .portfolio-item  {
-    width: 15vw;
-    max-width: 400px;
-    height: 15vw;
-    max-height: 400px;
-    margin: 1vw;
-
-  }
-  
-}
-
-@media (min-width: 1025px) {
-  .portfolio {
-    margin-top: 80px;
-  }
-}
-
-div > img {
-  width: 94vw;
-  height: 94vw;
-  }
-
   </style>
 
 		<header class="fixed" role="navigation">
@@ -125,8 +53,7 @@ div > img {
 
         <ul class="menu-items">   
           <li role="menuitem"><a class="a-link" href="index.html#about">about</a></li>
-          <li role="menuitem"><a class="a-link" href="index.html#services">services</a></li>
-          <li role="menuitem"><a class="a-link" href="index.html#testimonials">testimonials</a></li>
+          <li role="menuitem"><a class="a-link" href="gallery.html">gallery</a></li>
           <li role="menuitem"><a class="a-link" href="index.html#contact">contact</a></li>
         </ul>  
 
@@ -139,7 +66,7 @@ div > img {
           </div>
         </div>                    
 
-        <a data-email="kathy@kldny.com" href="mailto:kathy@kldny.com?subject=New Project Inquiry" class="hidden btn btn-cta" data-wipe="send an email" role="button" title="click to send email">work with us</a>
+      <a href="#"  onclick="clickToEmail();" class="hidden btn btn-cta" data-wipe="send an email" role="button" title="click to send email">work with us</a>
       </nav>
   </header>
 
@@ -153,172 +80,42 @@ div > img {
 
         <div class="screen"></div>
 
-		    <div class="portfolio" id="srcset">
+     <section class="gallery">
+        <h1 class="animate "  data-anim-delay="1000">Featured Projects<span class="red-element">.</span>
+      </h1>
 
-              <!-- 275 West 10 W PROJECT -->
-               <div class="portfolio-item" data-src="img/275W10/1.jpg" data-srcset="img/275W10/1.jpg 600w, img/275W10/1@2x.jpg 1200w, img/275W10/1@3x.jpg 1800w"> 
-               <img class="img"  src="img/275W10/1@3x.jpg" alt="Living room with volted ceiling structure" />
-             </div>
-            
-             <div class="portfolio-item" data-src="img/275W10/3.jpg" data-srcset="img/275W10/3.jpg 600w, img/275W10/3@2x.jpg 1200w, img/275W10/3@3x.jpg 1800w"> 
-                <img class="img"  src="img/275W10/3.jpg" alt="volted barrel ceiling" />
-              </div>
-             <div class="portfolio-item" data-src="img/275W10/4.jpg" data-srcset="img/275W10/4.jpg 600w, img/275W10/4@2x.jpg 1200w, img/275W10/4@3x.jpg 1800w"> 
-                        <img class="img"  src="img/275W10/4.jpg" alt="wide plank floor and valted ceiling in living room" />
-                      </div>
-             <div class="portfolio-item" data-src="img/275W10/5.jpg" data-srcset="img/275W10/5.jpg 600w, img/275W10/5@2x.jpg 1200w, img/275W10/5@3x.jpg 1800w"> 
-                        <img class="img"  src="img/275W10/5.jpg" alt="custom white kitchen cabinetry" />
-                      </div>
-             <div class="portfolio-item" data-src="img/275W10/6.jpg" data-srcset="img/275W10/6.jpg 600w, img/275W10/6@2x.jpg 1200w, img/275W10/6@3x.jpg 1800w"> 
-                        <img class="img"  src="img/275W10/6.jpg" alt="custom window radiator enclosures with storage" />
-             </div>
+   
+        <div class="portfolio u-margin-auto ">
+            <a  href="project/50RSD.html" class="portfolio-item rec-land-md" data-src="img/50RSD/165.jpg" data-srcset="img/50RSD/165.jpg 600w, img/50RSD/165@2x.jpg 1200w, img/50RSD/165@3x.jpg 1800w">
+               <h3>One Riverside Park - Theatre Set Apartment</h3>
+               <img class="img"  src="img/50RSD/165@2x.jpg" alt="living room with a reclaimed wood ceiling" />   
+            </a>
+         
+          <a href="project/250West.html" class="portfolio-item rec-land-md" data-src="img/250West/1.jpg" data-srcset="img/250West/1.jpg 600w, img/250West/1@2x.jpg 1200w, img/250West/1@3x.jpg 1800w">
+            <h3>Tribeca Loft Kitchen</h3>
+            <img class="img"  src="img/250West/1.jpg" alt="living room with a reclaimed wood ceiling" />     
+          </a>
 
-            <div class="portfolio-item" data-src="img/275W10/8.jpg" data-srcset="img/275W10/8.jpg 600w, img/275W10/8@2x.jpg 1200w, img/275W10/8@3x.jpg 1800w"> 
-            <img class="img"  src="img/275W10/8.jpg" alt="glass and steel wall structure in a sleping nook" />
-          </div>
-          <div class="portfolio-item" data-src="img/275W10/11.jpg" data-srcset="img/275W10/11.jpg 600w, img/275W10/11@2x.jpg 1200w, img/275W10/11@3x.jpg 1800w"> 
-            <img class="img"  src="img/275W10/11.jpg" alt="glass and steel wall in a sleping nook" />
-          </div>
-
-           <div class="portfolio-item" data-src="img/275W10/2.jpg" data-srcset="img/275W10/2.jpg 600w, img/275W10/2@2x.jpg 1200w, img/275W10/2@3x.jpg 1800w"> 
-            <img class="img"  src="img/275W10/2.jpg" alt="Living room with sleping nook" />
-           </div>
-
-          <div class="portfolio-item" data-src="img/275W10/7.jpg" data-srcset="img/275W10/7.jpg 600w, img/275W10/7@2x.jpg 1200w, img/275W10/7@3x.jpg 1800w"> 
-            <img class="img"  src="img/275W10/7.jpg" alt="custom kitchen cabnietry and waterfall white stone countertop " />
-          </div>
-
-          <div class="portfolio-item" data-src="img/275W10/9.jpg" data-srcset="img/275W10/9.jpg 600w, img/275W10/9@2x.jpg 1200w, img/275W10/9@3x.jpg 1800w"> 
-            <img class="img"  src="img/275W10/9.jpg" alt="ccustom cabinetry and glass mosaic backsplash" />
-          </div>
-
-          <div class="portfolio-item" data-src="img/275W10/10.jpg" data-srcset="img/275W10/10.jpg 600w, img/275W10/10@2x.jpg 1200w, img/275W10/10@3x.jpg 1800w"> 
-            <img class="img"  src="img/275W10/10.jpg" alt="floating bathroom vanity" />
-          </div>
-           <div class="portfolio-item" data-src="img/275W10/44.jpg" data-srcset="img/275W10/44.jpg 600w, img/275W10/44@2x.jpg 1200w, img/275W10/44@3x.jpg 1800w"> 
-            <img class="img"  src="img/275W10/44.jpg" alt="white mosaic shower wall" />
-          </div>
-
-           <!-- 250 West PROJECT -->
-            <div class="portfolio-item" data-src="img/250West/lg-03.jpg" data-srcset="img/250West/lg-03.jpg 600w, img/250West/lg-03.jpg.jpg 800w, img/250West/lg-03.jpg 1080w"> 
-            <img class="img"  src="img/250West/lg-03.jpg" alt="custom white kitchen cabinetry" />
-            <p>Project Name and description goes here</p>
-          </div>
-
-          <div class="portfolio-item" data-src="img/250West/lg-01.jpg" data-srcset="img/250West/lg-01.jpg 600w, img/250West/lg-01.jpg.jpg 800w, img/250West/lg-01.jpg 1080w"> 
-            <img class="img"  src="img/250West/lg-01.jpg" alt="custom white kitchen cabinetry" />
-          </div>
-         <!--   <div class="portfolio-item" data-src="img/250West/lg-02.jpg" data-srcset="img/250West/lg-02.jpg 600w, img/250West/lg-02.jpg.jpg 800w, img/250West/lg-02.jpg 1080w"> 
-            <img class="img"  src="img/250West/lg-02.jpg" alt="custom white kitchen cabinetry" />
-          </div> -->
-           <div class="portfolio-item" data-src="img/250West/lg-07.jpg" data-srcset="img/250West/lg-07.jpg 600w, img/250West/lg-07.jpg.jpg 800w, img/250West/lg-07.jpg 1080w"> 
-            <img class="img"  src="img/250West/lg-07.jpg" alt="custom white kitchen cabinetry" />
-          </div>
-
-          
-        <!--    
-           <div class="portfolio-item" data-src="img/250West/lg-05.jpg" data-srcset="img/250West/lg-05.jpg 600w, img/250West/lg-05.jpg.jpg 800w, img/250West/lg-05.jpg 1080w"> 
-            <img class="img"  src="img/250West/lg-05.jpg" alt="custom white kitchen cabinetry" />
-          </div> -->
-           
-          <!-- END 250 West PROJECT -->
-
-          <!-- CPW PROJECT -->
-
-          <div class="portfolio-item" data-src="img/115CPW/sm-01.jpg" data-srcset="img/115CPW/sm-01.jpg 600w, img/115CPW/md-01.jpg 800w, img/115CPW/lg-01.jpg 1080w"> 
-            <img class="img"  src="img/115CPW/sm-01.jpg" alt="custom white kitchen cabinetry" />
-          </div>
-
-          <div class="portfolio-item" data-src="img/115CPW/sm-02.jpg"  data-srcset="img/115CPW/sm-02.jpg 600w, img/115CPW/md-02.jpg 800w, img/115CPW/lg-02.jpg 1080w"> 
-            <img class="img"  src="img/115CPW/sm-02.jpg" alt="custom white kitchen cabinetry" />
-          </div>
-
-          <div class="portfolio-item" data-src="img/115CPW/sm-03.jpg"  data-srcset="img/115CPW/sm-03.jpg 600w, img/115CPW/md-03.jpg 800w, img/115CPW/lg-03.jpg 1080w"> 
-            <img class="img"  src="img/115CPW/sm-03.jpg" alt="dining room mirror wall" />
-          </div>
-
-          <div class="portfolio-item" data-src="img/115CPW/sm-04.jpg"  data-srcset="img/115CPW/sm-04.jpg 600w, img/115CPW/md-04.jpg 800w, img/115CPW/lg-04.jpg 1080w"> 
-            <img class="img"  src="img/115CPW/sm-04.jpg" alt="dining room mirror wall" />
-          </div>
-
-          <div class="portfolio-item" data-src="img/115CPW/sm-05.jpg"  data-srcset="img/115CPW/sm-05.jpg 600w, img/115CPW/md-05.jpg 800w, img/115CPW/lg-05.jpg 1080w"> 
-            <img class="img"  src="img/115CPW/sm-05.jpg" alt="custom dry bar cabinetry" />
-          </div>
-
-           <div class="portfolio-item" data-src="img/115CPW/sm-09.jpg"  data-srcset="img/115CPW/sm-09.jpg 600w, img/115CPW/md-09.jpg 800w, img/115CPW/lg-09.jpg 1080w"> 
-            <img class="img"  src="img/115CPW/sm-09.jpg" alt="living room hallway" />
-          </div>
-
-          <div class="portfolio-item" data-src="img/115CPW/sm-06.jpg"  data-srcset="img/115CPW/sm-06.jpg 600w, img/115CPW/md-06.jpg 800w, img/115CPW/lg-06.jpg 1080w"> 
-            <img class="img"  src="img/115CPW/sm-06.jpg" alt="bedroom hallway" />
-          </div>
-
-          <div class="portfolio-item" data-src="img/115CPW/sm-07.jpg"  data-srcset="img/115CPW/sm-07.jpg 600w, img/115CPW/md-07.jpg 800w, img/115CPW/lg-07.jpg 1080w"> 
-           <img class="img"  src="img/115CPW/sm-07.jpg" alt="bright elegant bathroom" />
-          </div>
-
-           <div class="portfolio-item" data-src="img/115CPW/sm-08.jpg"  data-srcset="img/115CPW/sm-08.jpg 600w, img/115CPW/md-08.jpg 800w, img/115CPW/lg-08.jpg 1080w"> 
-            <img class="img"  src="img/115CPW/sm-08.jpg" alt="dark blue powder room" />
-          </div>
-
-         <!-- END CPW PROJECT -->
-
-
-          <!-- 1049 PROJECT -->
-
-          <div class="portfolio-item" data-src="img/1049/sm-02.jpg"  data-srcset="img/1049/sm-01.jpg 600w, img/1049/md-02.jpg 800w, img/1049/lg-02.jpg 1080w"> 
-            <img class="img"  src="img/1049/sm-02.jpg" alt="full height custom living room cabinet" />
-          </div>
-
-          <div class="portfolio-item"  data-src="img/1049/sm-03.jpg"  data-srcset="img/1049/sm-03.jpg 600w, img/1049/md-03.jpg 800w, img/1049/lg-03.jpg 1080w" >
-            <img class="img"  src="img/1049/sm-03.jpg" alt="sliding glass and wood doors" />
-          </div>
-
-          <div class="portfolio-item" data-src="img/1049/sm-07.jpg"  data-srcset="img/1049/sm-07.jpg 600w, img/1049/md-07.jpg 800w, img/1049/lg-07.jpg 1080w">
-            <img class="img"  src="img/1049/sm-07.jpg" alt="living room cabinet and lighting" />
-          </div>
-
-          <div class="portfolio-item" data-src="img/1049/sm-09.jpg"  data-srcset="img/1049/sm-09.jpg 600w, img/1049/md-09.jpg 800w, img/1049/lg-09.jpg 1080w"> 
-            <img  class="img" src="img/1049/sm-09.jpg" alt="kitchen cabinetry and island" />
-          </div>
-          <div class="portfolio-item" data-src="img/1049/sm-12.jpg"  data-srcset="img/1049/sm-12.jpg 600w, img/1049/md-12.jpg 800w, img/1049/lg-12.jpg 1080w">
-            <img class="img"  src="img/1049/sm-12.jpg" alt="kitche ncabniets with glass doors" />
-          </div>
-
-          <div class="portfolio-item" data-src="img/1049/sm-10.jpg"  data-srcset="img/1049/sm-10.jpg 600w, img/1049/md-10.jpg 800w, img/1049/lg-10.jpg 1080w">
-            <img class="img"  src="img/1049/sm-10.jpg" alt="kitchen island with tall wood counter" />
-          </div>
-
-
-          <div class="portfolio-item item-lg" data-src="img/1049/sm-11.jpg"  data-srcset="img/1049/sm-11.jpg 600w, img/1049/md-11.jpg 800w, img/1049/lg-11.jpg 1080w"> 
-            <img class="img"  src="img/1049/sm-11.jpg" alt="glass and wood wall panel" />
-          </div>
+          <a href="project/1049Park.html" class="portfolio-item rec-port-md" data-src="img/275W10/11.jpg" data-srcset="img/275W10/11.jpg 600w, img/275W10/11@2x.jpg 1200w, img/275W10/11@3x.jpg 1800w"> 
+            <h3>Carnegie Hill Co-op </h3>
+            <img class="img"  src="img/1049/21_Furnished.jpg" alt="glass and steel wall in a sleping nook" />         
+          </a>
         
-            <div class="portfolio-item" data-src="img/1049/sm-14.jpg" data-srcset="img/1049/sm-14.jpg 600w, img/1049/md-14.jpg 800w, img/1049/lg-14.jpg 1080w" > 
-            <img class="img"  src="img/1049/sm-14.jpg"  alt="stone fireplace surround" />
-          </div>
+         <a  href="project/275W10.html" class="portfolio-item rec-land-md" data-src="img/275W10/1.jpg" data-srcset="img/275W10/1.jpg 600w, img/275W10/1@2x.jpg 1200w, img/275W10/1@3x.jpg 1800w">
+            <h3>West  Village Pied-A-Terre </h3>
+            <img class="img"  src="img/275W10/1@2x.jpg" alt="living room with a reclaimed wood ceiling" />
+          </a>
 
-          <div class="portfolio-item" data-src="img/1049/sm-18.jpg"  data-srcset="img/1049/sm-18.jpg 600w, img/1049/md-18.jpg 800w, img/1049/lg-18.jpg 1080w">
-            <img class="img"  src="img/1049/sm-18.jpg" alt="bathroom with marble countertop" />
-          </div>  
-           <div class="portfolio-item" data-src="img/1049/lg-21.jpg"  data-srcset="img/1049/sm-21.jpg 600w, img/1049/md-21.jpg 800w, img/1049/lg-21.jpg 1080w"> 
-           <img class="img"  src="img/1049/sm-21.jpg" alt="bathroom vanity cabinet with marble top" />
-          </div>
+         <a href="project/115CPW.html" class="portfolio-item rec-land-md" data-src="img/115CPW/sm-01.jpg" data-srcset="img/115CPW/sm-01.jpg 600w, img/115CPW/md-01.jpg 1200w, img/115CPW/lg-01.jpg 1800w">
+            <h3>The Majestic </h3>
+            <img class="img"  src="img/115CPW/md-01.jpg" alt="living room with a reclaimed wood ceiling" />     
+          </a>
 
-            <div class="portfolio-item" data-src="img/1049/sm-20.jpg"  data-srcset="img/1049/sm-20.jpg 600w, img/1049/md-20.jpg 800w, img/1049/lg-20.jpg 1080w"> 
-           <img class="img"  src="img/1049/sm-20.jpg" alt="shower with custom glass door and light tiles" />
-          </div>
+       
+      </div>
 
-          <div class="portfolio-item item-lg" data-src="img/1049/sm-16.jpg"  data-srcset=" img/1049/sm-16.jpg 600w, img/1049/md-16.jpg 800w, img/1049/lg-16.jpg 1080w">
-            <img class="img"  src="img/1049/sm-16.jpg" alt="bathroom with diamond shape off-white tiles" />
-          </div>
+     </section>
 
-          <div class="portfolio-item" data-src="img/1049/sm-05.jpg"  data-srcset="img/1049/sm-05.jpg 600w, img/1049/md-05.jpg 800w, img/1049/lg-05.jpg 1080w"> 
-            <img class="img"  src="img/1049/sm-05.jpg" alt="bathroom with dark blue high gloss tile and pocket door" />
-          </div>
-         <!-- END 1049 PROJECT -->
-
-        </div>
       </div>
     </main>  
 

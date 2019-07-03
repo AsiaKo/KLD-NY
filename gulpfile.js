@@ -16,8 +16,11 @@ const ghpages 		= require('gulp-gh-pages');
 // Project Source Variables 
 
 let styleSrc 	= 'src/css/*.css';
+
+					
 let jsSrc		= 'src/js/*.js';
 let htmlSrc		= 'src/*.html';
+let htmlSubSrc	= 'src/project/*.html';
 let imgSrc 		= 'src/img/**/*'
 let copySrc  	= [ 'src/css/vendor/*',
 					'src/css/fonts/*', 
@@ -48,15 +51,30 @@ function html(cb) {
 	.pipe(replaceHtml({
 	'css': 'css/main.min.css',
 	'js': 'js/main.min.js'
+
 	}))
 	.pipe(dest('dist'))
 	.pipe(browserSync.stream());
 	cb();
 };
 
-//Concat, minify  and rename css files
+
+// Replace style and script path in dest sub-folder HTML files
+function htmlSub(cb) {
+	src(htmlSubSrc)
+	.pipe(replaceHtml({
+	'cssSub': '../css/main.min.css',
+	'jsSub': '../js/main.min.js'
+	
+	}))
+	.pipe(dest('dist/project'))
+	.pipe(browserSync.stream());
+	cb();
+};
+
+ //Concat, minify  and rename css files
 function css(cb) {
-	src(styleSrc)
+	 src(styleSrc)
 	  .pipe(concat('main.css'))
 	  .pipe(cssmin())
 	  .pipe(rename({
@@ -64,8 +82,9 @@ function css(cb) {
 	  }))
 	  .pipe(dest('dist/css'))
 	  .pipe(browserSync.stream());
-	  cb();
+	cb();
 };
+
 
 // Compile, minify and rename js files 
 function js(cb){
@@ -78,7 +97,7 @@ function js(cb){
       cb();
 };
 
-//Optimize images
+//Optimize images and cache
 function images() {
 	 return src(imgSrc)
 		.pipe(imagemin())
@@ -92,8 +111,8 @@ function copy() {
 	return src(copySrc, {base:'src'})
 		.pipe(dest('dist'))
 		.pipe(browserSync.stream());
-	
 };
+
 
 function watch_files() {
 	watch(styleSrc, series(css, reload));
@@ -116,13 +135,14 @@ function deploy(cb) {
 
 
 task('html', html);
+task('htmlSub', htmlSub);
 task('css', css);
 task('js', js);
 task('copy', copy);
 task('images', images);
 task('deploy', deploy);
 
-task('default', parallel(html, css, js, images, copy)); 
+task('default', parallel(html, htmlSub, css, js, images, copy)); 
 task('watch', parallel(browser_sync, watch_files));
 
 
