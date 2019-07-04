@@ -113,7 +113,6 @@
   width: 0;
   position: absolute;
   right: 5%;
-  /*top: calc(100vh - 80px);*/
   top: calc(100vh - 120px);
   opacity: 1;
   background-color: var(--accent-color, red);
@@ -156,11 +155,7 @@
 @media screen and (min-width: 1024px) {
 
   .line.line-scroll {
-<<<<<<< HEAD
     top: calc(100vh - 100px);
-=======
-    top: calc(100vh - 80px);
->>>>>>> 8db716a87ad0479aa672aec4d6a227cf0e1fe09a
   }
 
   .line-scroll:before {

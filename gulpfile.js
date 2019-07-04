@@ -15,9 +15,7 @@ const ghpages 		= require('gulp-gh-pages');
 
 // Project Source Variables 
 
-let styleSrc 	= 'src/css/*.css';
-
-					
+let styleSrc 	= 'src/css/*.css';					
 let jsSrc		= 'src/js/*.js';
 let htmlSrc		= 'src/*.html';
 let htmlSubSrc	= 'src/project/*.html';
@@ -73,8 +71,8 @@ function htmlSub(cb) {
 };
 
  //Concat, minify  and rename css files
-function css(cb) {
-	 src(styleSrc)
+function css() {
+	return src(styleSrc)
 	  .pipe(concat('main.css'))
 	  .pipe(cssmin())
 	  .pipe(rename({
@@ -82,7 +80,7 @@ function css(cb) {
 	  }))
 	  .pipe(dest('dist/css'))
 	  .pipe(browserSync.stream());
-	cb();
+
 };
 
 
