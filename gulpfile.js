@@ -117,6 +117,7 @@ function watch_files() {
 	watch(jsSrc, series(js, reload));
 	watch(imgSrc, series(images, reload));
 	watch(htmlSrc, series(html, reload));
+	watch(htmlSubSrc, series(htmlSub, reload));
 	watch(copySrc, series(copy, reload));
 }
 
