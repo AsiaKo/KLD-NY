@@ -257,7 +257,7 @@ ul.contact-items {
 
 @media screen and (min-width: 1024px) and (orientation: landscape) {
   section {
-  /*  height:calc(100vh - 70px);*/
+    height:calc(100vh - 70px);
   }
 
   .content {

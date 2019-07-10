@@ -9,7 +9,6 @@
 <!-- build:cssSub -->
 <link rel="stylesheet" type="text/css" href="../css/main.css">
   <!-- endbuild -->
-  
 <link rel="stylesheet" href="../css/vendor/lightgallery.css">
  
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../img/favicon/apple-touch-icon-144x144.png" />
@@ -42,12 +41,18 @@
 
 </head>
 <body>
-
   <style>
-    
-  .rec-port-md:last-of-type {
-   grid-column-start: 2;
+    .portfolio {
+      grid-template-columns: repeat(2, 400px);  
+    }
+
+    .rec-port-md  {
+    justify-self: left;
   }
+
+}
+
+
   </style>
 
 		<header class="fixed" role="navigation">
@@ -73,133 +78,61 @@
       </nav>
   </header>
      <!-- BACK TO TOP -->
-  <div class="line line-top"></div>
+   <div class="line line-top"></div>
      <!-- END BACK TO TOP -->
-   <main  class="content" role="main">     
+   <main  class="content" role="main">
+     
      <div class="wrapper-page">
 
         <div class="screen"></div>
+
         <section class="section project gallery">
-          <div class="col col-1 animate">
-            <h2 class="animate" data-anim-delay="1000"> Carnegie Hill Co&#8209;op </h2>
+      <div class="col col-1 animate">
+          <h2 class="animate" data-anim-delay="1000">  Tribeca Loft Kitchen</h2>
             <div class="project__info">
+
                <ul>
                   <li>Location:</li>
                   <li>Completion: </li>
                   <li>Architect:</li>
                   <li>Scope:</li>
                 </ul>
+
                 <ul>
-                  <li>1049 Park</li>
-                  <li>2019</li>
-                  <li>DHD Architecture + Interior Design</li>
-                  <li>The gut renovation of this 3 Bedroom, 3 Baths Apartment features all new custom millwork and finishes throughout including Kitchen, Bathroom and Living Room cabinetry, sliding wood doors, wall panels, and a marble fireplace surround. 
+                  <li>250 West Street</li>
+                  <li>2017</li>
+                  <li>Kacey Ellis Design</li>
+                  <li>Kitchen renovation included all new plumbing and electrical, custom cabinetry, new appliances, natural sand stone counter tops with full backsplash and range hood surround.
                   </li>
                 </ul>
-              </div>
+                
             </div>
-            <div class="portfolio u-margin-auto" id="srcset">
-              
-              <a class="portfolio-item rec-port-md" data-src="../img/1049/21_furnished.jpg"  data-srcset="../img/1049/21_furnished.jpg 600w, ../img/1049/21_furnished@2x.jpg 800w, ../img/1049/21_furnished@3x.jpg 1080w">
-              <h3 class="hidden">OPEN PROJECT GALLERY</h3>
-              <img class="img"  src="../img/1049/21_furnished@2x.jpg" alt="full height custom living room cabinet" />
-              </a>
+        </div>
+        <div class="portfolio u-margin-left-auto" id="srcset">
 
-              <a class="portfolio-item rec-land-md" data-src="../img/1049/5.jpg"  data-srcset="../img/1049/5.jpg 600w, ../img/1049/5@2x.jpg 800w, ../img/1049/5@3x.jpg 1080w"> 
+          <a  class="portfolio-item rec-land-lg" data-src="../img/250West/1.jpg" data-srcset="../img/250West/1.jpg 600w, ../img/250West/1@2x.jpg 800w, ../img/250West/1@3x.jpg 1080w">
               <h3 class="hidden">OPEN PROJECT GALLERY</h3>
-              <img class="img"  src="../img/1049/5@2x.jpg" alt="Wall cabinet and sliding glass doors" />
-              </a>
-
-              <a class="portfolio-item rec-land-md" data-src="../img/1049/sm-03.jpg"  data-srcset="../img/1049/sm-03.jpg 600w, ../img/1049/md-03.jpg 800w, ../img/1049/lg-03.jpg 1080w"> 
+             <img class="img"  src="../img/250West/1.jpg" alt="Kitchen with island and stone backsplash" />   
+          </a>
+       
+          <a  class="portfolio-item rec-port-md" data-src="../img/250West/3.jpg" data-srcset="../img/250West/3.jpg 600w, ../img/250West/3@2x.jpg 1200w, ../img/250West/3@3x.jpg 1800w">
               <h3 class="hidden">OPEN PROJECT GALLERY</h3>
-              <img class="img"  src="../img/1049/sm-03.jpg" alt="full height custom living room cabinet" />
-              </a>
-              <a class="portfolio-item rec-land-md" data-src="../img/1049/sm-02.jpg"  data-srcset="../img/1049/29_furnished.jpg 600w, ../img/1049/md-02.jpg 800w, ../img/1049/lg-02.jpg 1080w"> 
+             <img class="img"  src="../img/250West/3.jpg" alt="Kitchen with island and stone backsplash" />   
+          </a>
+
+          <a class="portfolio-item rec-land-lg" data-src="../img/250West/2.jpg" data-srcset="../img/250West/2.jpg 600w, ../img/250West/2@2x.jpg 1200w, ../img/250West/2@3x.jpg 1800w">
               <h3 class="hidden">OPEN PROJECT GALLERY</h3>
-              <img class="img"  src="../img/1049/sm-02.jpg" alt="full height custom living room cabinet" />
-              </a>
+             <img class="img"  src="../img/250West/2.jpg" alt="Kitchen with island and stone backsplash" />   
+          </a>
+        </div>
+         
+        <a href="../gallery.html" class="btn-text btn-previous u-margin-top-small u-margin-bottom-small"> Back to Projects</a>
 
-              <a class="portfolio-item rec-land-md" data-src="../img/1049/29_furnished.jpg"  data-srcset="../img/1049/sm-01.jpg 600w, ../img/1049/29_furnished@2x.jpg 800w, ../img/1049/29_furnished@3x.jpg 1080w"> 
-              <h3 class="hidden">OPEN PROJECT GALLERY</h3>
-              <img class="img"  src="../img/1049/29_furnished@2x.jpg" alt="Living room with custom bookshelf and wall sliding doors" />
-              </a>
+    </section>
 
-              <a class="portfolio-item rec-land-md" data-src="../img/1049/sm-13.jpg"  data-srcset="../img/1049/sm-13.jpg 600w, ../img/1049/md-13.jpg 800w, ../img/1049/lg-13.jpg 1080w"> 
-              <h3 class="hidden">OPEN PROJECT GALLERY</h3>
-              <img class="img"  src="../img/1049/sm-13.jpg" alt="stone fireplace surround" />
-              </a>
-
-              <a class="portfolio-item rec-port-md" data-src="../img/1049/37_furnished.jpg"  data-srcset="../img/1049/37_furnished.jpg 600w, ../img/1049/37_furnished@2x.jpg 800w, ../img/1049/37_furnished@3x.jpg 1080w"> 
-              <h3 class="hidden">OPEN PROJECT GALLERY</h3>
-              <img class="img"  src="../img/1049/37_furnished@2x.jpg" alt="Living room with stone fireplace surround and cabinetry" />
-              </a>
-
-              <a class="portfolio-item rec-land-md" data-src="../img/1049/34_furnished.jpg"  data-srcset="../img/1049/34_furnished.jpg 600w, ../img/1049/34_furnished@2x.jpg 800w, ../img/1049/34_furnished@3x.jpg 1080w"> 
-              <h3 class="hidden">OPEN PROJECT GALLERY</h3>
-              <img class="img"  src="../img/1049/34_furnished@2x.jpg" alt="Living room with stone fireplace surround and cabinetry" />
-              </a>
-
-              <a class="portfolio-item rec-land-md" data-src="../img/1049/sm-11.jpg"  data-srcset="../img/1049/sm-11.jpg 600w, ../img/1049/md-11.jpg 800w, ../img/1049/lg-11.jpg 1080w"> 
-              <h3 class="hidden">OPEN PROJECT GALLERY</h3>
-              <img class="img"  src="../img/1049/sm-11.jpg" alt="full height custom living room cabinet" />
-              </a>    
-
-              <a class="portfolio-item rec-land-md" data-src="../img/1049/sm-12.jpg"  data-srcset="../img/1049/sm-12.jpg 600w, ../img/1049/md-12.jpg 800w, ../img/1049/lg-12.jpg 1080w"> 
-              <h3 class="hidden">OPEN PROJECT GALLERY</h3>
-                <img class="img"  src="../img/1049/sm-12.jpg" alt="full height custom living room cabinet" />
-              </a>
-
-              <a class="portfolio-item rec-port-md" data-src="../img/1049/24.jpg"  data-srcset="../img/1049/24.jpg 600w, ../img/1049/24@2x.jpg 800w, ../img/1049/24@3x.jpg 1080w"> 
-              <h3 class="hidden">OPEN PROJECT GALLERY</h3>
-              <img class="img"  src="../img/1049/24@2x.jpg" alt="kitchen cabinetry with stone countertops and island" />
-              </a>
-
-              <a class="portfolio-item rec-land-md" data-src="../img/1049/21.jpg"  data-srcset="../img/1049/21.jpg 600w, ../img/1049/21@2x.jpg 800w, ../img/1049/21@3x.jpg 1080w"> 
-              <h3 class="hidden">OPEN PROJECT GALLERY</h3>
-              <img class="img"  src="../img/1049/21@2x.jpg" alt="kitchen cabinetry with stone countertops and island" />
-              </a>
-
-              <a class="portfolio-item rec-land-md" data-src="../img/1049/28.jpg"  data-srcset="../img/1049/28.jpg 600w, ../img/1049/28@2x.jpg 800w, ../img/1049/28@3x.jpg 1080w"> 
-              <h3 class="hidden">OPEN PROJECT GALLERY</h3>
-              <img class="img"  src="../img/1049/28@2x.jpg" alt="kitchen cabinetry with stone countertops and island" />
-              </a>
-
-              <a class="portfolio-item rec-port-md" data-src="../img/1049/56_furnished.jpg"  data-srcset="../img/1049/sm-01.jpg 600w, ../img/1049/56_furnished@2x.jpg 800w, ../img/1049/56_furnished@3x.jpg 1080w"> 
-              <h3 class="hidden">OPEN PROJECT GALLERY</h3>
-              <img class="img"  src="../img/1049/56_furnished@2x.jpg" alt="hallway with wainscot" />
-                </a>
-
-              <a class="portfolio-item rec-land-md" data-src="../img/1049/35.jpg"  data-srcset="../img/1049/35.jpg 600w, ../img/1049/35@2x.jpg 800w, ../img/1049/35@3x.jpg 1080w"> 
-              <h3 class="hidden">OPEN PROJECT GALLERY</h3>
-              <img class="img"  src="../img/1049/35@2x.jpg" alt="hallway with wainscot" />
-              </a>
-
-              <a class="portfolio-item rec-port-md" data-src="../img/1049/54_furnished.jpg"  data-srcset="../img/1049/54.jpg 600w, ../img/1049/54_furnished@2x.jpg 800w, ../img/1049/54_furnished@3x.jpg 1080w"> 
-              <h3 class="hidden">OPEN PROJECT GALLERY</h3>
-              <img class="img"  src="../img/1049/54_furnished@2x.jpg" alt="hallway with wainscot" />
-              </a>
-
-              <a class="portfolio-item rec-port-md" data-src="../img/1049/sm-20.jpg"  data-srcset="../img/1049/sm-01.jpg 600w, ../img/1049/md-20.jpg 800w, ../img/1049/lg-20.jpg 1080w"> 
-              <h3 class="hidden">OPEN PROJECT GALLERY</h3> 
-              <img class="img"  src="../img/1049/sm-20.jpg" alt="Master bathroom vanity with marble countertop" />
-              </a>
-
-              <a class="portfolio-item rec-land-md" data-src="../img/1049/sm-19.jpg"  data-srcset="../img/1049/sm-01.jpg 600w, ../img/1049/md-19.jpg 800w, ../img/1049/lg-19.jpg 1080w"> 
-              <h3 class="hidden">OPEN PROJECT GALLERY</h3>
-              <img class="img"  src="../img/1049/sm-19.jpg" alt="Master bathroom vanity with marble countertop" />
-              </a>
-
-              <a class="portfolio-item rec-port-md" data-src="../img/1049/15.jpg"  data-srcset="../img/1049/15.jpg 600w, ../img/1049/15@2x.jpg 800w, ../img/1049/15@3x.jpg 1080w"> 
-              <h3 class="hidden">OPEN PROJECT GALLERY</h3>
-              <img class="img"  src="../img/1049/15.jpg" alt="powder Room with dark blue tiles" />
-              </a>
-          </div>
-           
-          <a href="../gallery.html" class="btn-text btn-previous u-margin-top-small u-margin-bottom-small"> Back to Projects</a>
-
-      </section>
-    </div> <!-- wrapper-page end-->
-  </main>  
+        </div>
+      </div>
+    </main>  
 
 	<footer class="footer">
   <div class="copy">© KLD NY <span class="year"></span></div>

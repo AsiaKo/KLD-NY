@@ -33,7 +33,8 @@
 }
 
 .u-margin-auto {
-margin: auto;
+margin-left:  auto;
+margin-right: auto;
 }
 .u-margin-left-auto {
 margin-left: auto;

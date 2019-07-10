@@ -18,7 +18,7 @@ const ghpages 		= require('gulp-gh-pages');
 let styleSrc 	= 'src/css/*.css';					
 let jsSrc		= 'src/js/*.js';
 let htmlSrc		= 'src/*.html';
-let htmlSubSrc	= 'src/project/*.html';
+let htmlSubSrc	= 'src/projects/*.html';
 let imgSrc 		= 'src/img/**/*'
 let copySrc  	= [ 'src/css/vendor/*',
 					'src/css/fonts/*', 
@@ -41,7 +41,7 @@ function browser_sync(cb) {
 
 function reload(cb) {
 	browserSync.reload();
-	cb();
+	cb();   
 };
 // Replace style and script path in dest HTML files
 function html(cb) {
@@ -65,7 +65,7 @@ function htmlSub(cb) {
 	'jsSub': '../js/main.min.js'
 	
 	}))
-	.pipe(dest('dist/project'))
+	.pipe(dest('dist/projects'))
 	.pipe(browserSync.stream());
 	cb();
 };
@@ -122,7 +122,7 @@ function watch_files() {
 }
 
 /**
- * Push build to gh-pages
+ * Push build to gh-pages - "gulp deploy"
  */
 
 function deploy(cb) {
