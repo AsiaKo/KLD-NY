@@ -6,4 +6,4 @@ logs
 *.log
 node_modules/
 .publish
-dist/
+dist
