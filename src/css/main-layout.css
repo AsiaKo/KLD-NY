@@ -133,8 +133,8 @@ section:not(:first-of-type) {
 .contact, .error {
   margin-top: 50px;
   padding-top: 0;
-  height: calc(100vh - 170px);
-  min-height: calc( 100vh - 170px);
+  height: calc(100vh - 120px);
+  min-height: calc( 100vh - 120px);
   margin-bottom: 0;
 }
 
@@ -195,6 +195,7 @@ ul.contact-items {
 
 .contact .contact-items p  {
   margin: auto 0;
+  width:100%;/* Safari fix */
 }
 
 .contact-items li {

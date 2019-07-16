@@ -6,6 +6,7 @@
 
 /*WORK WITH US BTN*/
 
+
 a.btn {    
 
   width: fit-content;/*  does not work in IE/Edge*/
@@ -128,14 +129,16 @@ a.a-link,  .btn{
   font-size: var(--root-font-size);
   color: var(--accent-color, red);
   text-decoration: none;
- /* display: inline-block;*/
-  display: table-cell; /*Restrict border width to text width in a block element in Edge*/
+ /* display: inline;*/
   border-bottom: 1.5px solid var(--accent-color, red);
   padding: 2px;
   transition: all .2s;
   position: relative;
   max-width: max-content;
   text-transform: uppercase;
+  width: fit-content;
+  width: -moz-fit-content; /*Restrict border width to text width in a block element in Firefox Nightly*/
+  display: table-cell; /*Restrict border width to text width in a block element in Edge*/
 }
 
 .btn-next:after {
@@ -143,20 +146,22 @@ a.a-link,  .btn{
   position: relative;
   -webkit-transition: all .2s ease-in-out;
   margin-left: 10px;
-  display: inline-block;
+  /*display: inline;*/
 }
 
 .btn-previous:before{
   content: "\2190";
   position: relative;
   -webkit-transition: all .2s ease-in-out;
-  display: inline-block;
+  display: inline;
 }
 
 
 .btn-text:hover {
   color:var(--accent-color, red);
   border-bottom: 1.5px solid var(--accent-color, red);
+
+  width: fit-content;
 }
 
 .btn-text:active {
@@ -177,7 +182,7 @@ a.a-link,  .btn{
 
  /* ==========================================================================
     END BUTTONS.CSS
-   ========================================================================== */
+   ========================================================================== 
 
 
 
