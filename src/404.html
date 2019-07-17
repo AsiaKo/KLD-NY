@@ -40,13 +40,12 @@
 
 <meta name="google-site-verification" content="W7H1DNi1iBQAGO9kYH82mVfqFMvMAfSX97Rc0Qtrz-A" />
 
-
 </head>
 
 <body>
  <header class="fixed" role="header"> 
     <nav  id="nav" class="nav" role="navigation">  
-      <a class="scroll logo" href="index.html#home">
+      <a class="logo" href="index.html#home">
         <img src="assets/logo.png"  class="logo" height="30" alt="logo" > 
       </a>
     </nav>
@@ -56,7 +55,7 @@
 
   .wrapper-page .error {
       width: 96%;
-      margin: 50px auto 0;
+      margin: 0 auto;
   }
 
   .error .col-1 {
@@ -64,50 +63,60 @@
   }
 
    .error {
-    flex-direction: column-reverse;
     justify-content: space-around;
-
   }
 
   .error {
-  
     margin-top: 50px;
     padding-top: 0;
-    height: calc(100vh - 150px);
-    min-height: calc(100vh - 150px);
     margin-bottom: 0;
   }
 
-@media (min-width: 400px) {
-   .error {
-     flex-direction: column-reverse;
+  @media (orientation: portrait){
+     .error {
+       flex-direction: column-reverse;
+     }
+  }
+
+  .error {
+    margin-top: 50px;
+    padding-top: 0;
+    margin-bottom: 0;
+}
+
+  .error .col-2 {
+    height:calc(50vh - 170px);
    }
-}
 
-
-  .error {
-    margin-top: 50px;
-    padding-top: 0;
-   /* height: calc(100vh - 150px);*/
-    min-height: calc( 100vh - 110px);
-    margin-bottom: 0;
-}
-
- .error .col-2 {
-  height:calc(50vh - 170px);
- }
-   .error .col-2 img {
-  
+  .error .col-2 img {
     height: 100%;
     object-fit: contain;
+  }
+
+@media (orientation: landscape){
+   .error .col-2 {
+  height:calc(100vh - 170px);
+ }
+   .error .col {
+    margin-bottom: 50px;
+  }
 }
 
+@media (max-height: 420px) and (orientation: landscape){
+  .error .col-2 {
+    height:calc(100vh - 170px);
+    margin:0 auto;
+ }
+
+ .error .no-display {
+  display:none;
+ }
+}
 
 .btn-wipe_secondary  {
   float: right;
   color: var(--light-font-color);
   border: 1px solid gray;
- 
 }
 
 a[data-wipe].btn-wipe_secondary {
@@ -127,11 +136,11 @@ a[data-wipe]:before .btn-wipe_secondary , a[data-wipe].btn-wipe_secondary::after
     <section  class="error" role="section">
       <div class="col col-1">   
         <h1 >Oops<span>!</span>  </h1>
-        <p>Seems like the page you are looking for wasn't included in the contract.</p>
-        <p>We can issue a Change Order and contact our web developer to fix it, or we can take you back to the home page.</p>
+        <p >Seems like the page you are looking for wasn't included in the contract.</p>
+        <p class="no-display">We can issue a Change Order and contact our web developer to fix it, or we can take you back to the home page.</p>
         <div class="cta-group">
             <a class="btn btn-wipe" href="index.html" data-wipe="take me back">take me back</a>
-            <a class="btn btn-wipe btn-wipe_secondary" href="https://joannakozik.com/"  target="_blank" data-wipe="Issue CO">Issue CO</a>
+            <a class="no-display btn btn-wipe btn-wipe_secondary " href="https://joannakozik.com/"  target="_blank" data-wipe="Issue CO">Issue CO</a>
         </div>
       </div>
 

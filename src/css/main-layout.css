@@ -240,7 +240,7 @@ ul.contact-items {
 
 }
   
-@media  screen and (max-height: 568px) and (orientation: landscape) {
+@media  screen and (max-height: 375px) and (orientation: landscape) {
   .contact-items span.icon {
     display: none;
   }
